@@ -1,0 +1,917 @@
+/* 
+    Este es el css para todo el "sistema operativo" a partir de la boot screen 
+
+    version 0.4
+
+*/
+
+html{
+    margin: 0;
+    padding: 0;
+
+    scrollbar-width: 20px;
+}
+
+::-webkit-scrollbar {
+    color: var(--selection-color);
+    width: 20px;
+    height: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--body-color);
+  padding: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+
+    background: var(--secbody-color);
+    border-style: solid;
+    border-color: white black black white;
+    border-width: 2px;
+    outline: var(--body-color) 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:active {
+    background: var(--terbody-color);
+    border-style: solid;
+    border-color: black white white black;
+    border-width: 2px;
+    outline: var(--body-color) 2px;
+}
+
+/*::-webkit-scrollbar-button{
+    background: #c0c0c0;
+    color: black;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: white black black white;
+
+    width: 20px;
+    height: 20px;
+}*/
+::-webkit-scrollbar-button:single-button:vertical:decrement{
+    background-image: url("./icons/System/button-arrow-up.svg");
+    background-size: cover;
+    background-color: var(--body-color);
+    height: 20px;
+
+    border-style: solid;
+    border-color: white black black white;
+    border-width: 2px;
+    outline: var(--body-color) 2px;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment{
+    background-image: url("./icons/System/button-arrow-down.svg");
+    background-size: cover;
+    background-color: var(--body-color);
+    height: 20px;
+
+    border-style: solid;
+    border-color: white black black white;
+    border-width: 2px;
+    outline: var(--body-color) 2px;
+}
+::-webkit-scrollbar-button:single-button:horizontal:decrement{
+    background-image: url("./icons/System/button-arrow-left.svg");
+    background-size: cover;
+    background-color: var(--body-color);
+    width: 20px;
+
+    border-style: solid;
+    border-color: white black black white;
+    border-width: 2px;
+    outline: var(--body-color) 2px;
+}
+::-webkit-scrollbar-button:single-button:horizontal:increment{
+    background-image: url("./icons/System/button-arrow-right.svg");
+    background-size: cover;
+    background-color: var(--body-color);
+    width: 20px;
+
+    border-style: solid;
+    border-color: white black black white;
+    border-width: 2px;
+    outline: var(--body-color) 2px;
+}
+
+:root{
+    --fontsize: 0px ;
+
+    --text-color: black;
+    --bakground-color: #008080;
+    --selection-color: #000080;
+    --body-color: #c3c3c3;
+    --secbody-color: #a0a0a0;
+    --terbody-color: #808080;
+}
+
+::selection{
+    background-color: var(--selection-color);
+    color: white;
+    text-shadow: none;
+}
+::-moz-selection{
+    background-color: var(--selection-color);
+    color: white;
+    text-shadow: none;
+}
+
+*{
+    image-rendering: pixelated;
+
+    font-family: F95;
+    font-smooth: none;
+
+    font-size: calc(14px - var(--fontsize));
+}
+
+/* START MENU */
+
+@keyframes moving{
+    0%{
+        background-position: 0% 0%;
+    }
+    
+    50%{
+        background-position: 50% 50%;
+    }
+
+    100%{
+        background-position: 100% 100%;
+    }
+}
+
+@font-face {
+    font-family: F95;
+    src: url(./Fonts/MSSansSerif8pt.ttf);
+}
+
+@font-face {
+    font-family: TimesNew95;
+    src: url(./Fonts/pixelated-times-new-roman.otf);
+}
+
+h1{
+    font-family: TimesNew95;
+    font-weight: 100;
+    font-size: calc(60px - var(--fontsize));
+
+    line-height: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.Startmenu{
+    margin: 0;
+    padding: 0;
+
+    background: url(./images/Win95bootsm.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    background-position: start center;
+
+    align-items: center;
+    justify-content: center;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+.loading-bar{
+    position: absolute;
+    display: flex;
+    margin-top: auto;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 40px;
+
+    background: linear-gradient(90deg,rgba(6, 139, 191, 1) 0%, rgba(171, 171, 171, 1) 15%, rgba(171, 171, 171, 1) 35%, rgba(6, 139, 191, 1) 50%, rgba(171, 171, 171, 1) 65%, rgba(171, 171, 171, 1) 85%, rgba(6, 139, 191, 1) 100%);
+    background-size: 200% 200%;
+    animation-name: moving;
+    animation-duration: 3s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    bottom: 0;
+}
+
+/* Desktop */
+
+.Desktop{
+    width: 100%;
+    height: 100vh;
+
+    font-family: F95;
+    font-smooth: none;
+
+    background: var(--bakground-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    color: white;
+    -webkit-user-drag: none;
+}
+
+.Desktop img{
+    -webkit-user-drag: none;
+}
+
+.button{
+    padding: 0px 5px 0px 5px;
+    margin: 0px;
+    
+    background-color: var(--body-color);
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;
+}
+.button:active{
+    padding: 0px 5px 0px 5px;
+    margin: 0px;
+    
+    background-color: var(--secbody-color);
+    border-style: solid;
+    border-width: 2px;
+    border-color: black white white black;
+}
+
+.input{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+
+    margin: 4px;
+
+    width: 16px;
+    height: 16px;
+    margin-bottom: 10px;
+
+    background-color: white;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;
+}
+.input input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.Checkmark{
+    position: absolute;
+    margin: 0;
+    font-size: calc(14px - var(--fontsize));
+    top: 0px;
+    left: 0px;
+    height: 14px;
+    width: 14px;
+    filter: brightness(1.75);
+    text-shadow: 1px 1px 0px white;
+}
+
+.input input:checked ~ .Checkmark{
+    color: black;
+    display: block;
+    filter: brightness(0);
+}
+
+#contextmenu{
+    position:absolute;
+    z-index: 999999999999999;
+    padding: 2px;
+
+    margin: 0;
+    font-size: calc(14px - var(--fontsize));
+
+    color: black;
+    background-color: var(--body-color);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;    
+
+    width: auto;
+    max-width: 200px;
+}
+
+#contextmenu > button{
+    width: 100%;
+
+    border: none;
+    
+    padding-top: 4px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    margin: 0;
+    font-size: calc(14px - var(--fontsize));
+    white-space: nowrap;
+    background-color: transparent;
+
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+#contextmenu > button > img{
+    width: 32px;
+
+    image-rendering: pixelated;
+    vertical-align: middle;
+}
+
+#contextmenu > button:hover{
+    color: white;
+    background-color: var(--selection-color);
+
+    text-shadow: none;
+}
+#contextmenu > button:hover > img{
+    filter: invert();
+}
+
+#contextmenu > hr {
+    border-width: 2px;
+    border-color: var(--terbody-color) white white var(--terbody-color);
+    border-style: solid;
+}
+
+.disabled{
+    color: var(--secbody-color);
+    text-shadow: 1px 1px 0px white;
+}
+
+/* Barra de tareas */
+
+.Taskbar{
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 3px 4px 3px;
+
+    background-color: var(--body-color);
+
+    border-color: white none none none;
+    border-style: solid;
+    border-width: 2px 0px 0px 0px;
+
+    z-index: 9999999999999;
+}
+
+.Taskbar div{
+    display: flex;
+}
+
+.Taskbar hr{
+    padding: 0px;
+    margin: 0px 3px 0px 3px;
+
+    width: 0px;
+
+    height: 24.5px;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--terbody-color) white white var(--terbody-color);
+}
+
+.StartButton{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px 4px 0px 4px;
+    margin: 0px;
+    gap: 2px;
+
+    background-color: var(--body-color);
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;
+}
+
+.StartButton:active{
+    background-color: var(--secbody-color);
+    border-color: black white white black;
+}
+
+.StartButton img{
+    width: 20px;
+    height: 20px;
+}
+
+.StartButton p {
+    text-align: center;
+    vertical-align: middle;
+
+    font-weight: 700;
+    margin: 0;
+    font-size: calc(14px - var(--fontsize));
+
+    line-height: 0px;
+}
+
+.taskbar-button{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px 4px 0px 4px;
+    margin: 0px;
+    gap: 2px;
+
+    background-color: var(--body-color);
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;
+}
+
+.taskbar-button:active{
+    background-color: var(--secbody-color);
+    border-color: black white white black;
+}
+
+.taskbar-button p {
+    text-align: center;
+    vertical-align: middle;
+
+    margin: 0;
+    font-size: calc(14px - var(--fontsize));
+
+    line-height: 0px;
+}
+
+.taskbar-button img{
+    width: 20px;
+    height: 20px;
+}
+
+.Social{
+    display: flex;
+    right: 0;
+
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+
+    background-color: transparent;
+}
+
+.Social button{
+    background-color: transparent;
+    border: transparent;
+}
+
+.Social button:hover{
+    background-color: var(--selection-color);
+}
+
+.Social button:active img{
+    filter: invert();
+}
+
+.Social button img{
+    padding: 0;
+    margin: 0;
+
+    width: 24px;
+    height: 23px;
+}
+
+.Widgets{
+    display: flex;
+    flex-direction: row;
+    right: 0;
+
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+
+    background-color: var(--body-color);
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--terbody-color) white white var(--terbody-color);
+
+    padding: 0px 5px 0px 0px;
+}
+
+.Widgets button{
+    background-color: transparent;
+    border-style: none;
+}
+
+.Widgets button img{
+    padding: 0px;
+    margin: 0px;
+
+    width: 20px;
+    height: 20px;
+}
+
+.Widgets p {
+    margin: 0;
+    font-size: calc(14px - var(--fontsize));
+    line-height: 0px;
+    color: black;
+}
+
+#Apps{
+    width: 100%;
+    display: flex;
+
+    flex-direction: row;
+}
+
+/* NOTIFICATIONS */
+.Notification{
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    z-index: 9999;
+
+    padding: 12px;
+
+    color: black;
+    background-color: #feffdf;
+
+    font-size: calc(14px - var(--fontsize));
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 15px;
+}
+
+
+.Notification button{
+    position: absolute;
+
+    margin: 0;
+    padding: 0;
+    
+    width: 22px;
+    height: 20px;
+
+    right: 10px;
+    background-color: transparent;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--secbody-color);
+}
+.Notification button:active{
+    background-color: #d4d6b2;
+}
+.Notification div{
+    display: flex;
+}
+.Notification img{
+    width: 20px;
+    height: 20px;
+
+    padding: 0px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+}
+.Notification h4{
+    margin: 0;
+    padding: 0;
+
+    vertical-align: middle;
+    padding-top: 4px;
+}
+.Notification p{
+    margin: 0;
+}
+.Notification button img{
+    width: 12px;
+    height: 30px;
+    position: absolute;
+    top: -7px;
+    right: -5px;
+
+}
+
+/* Windows */
+
+.Window{
+    position:absolute;
+    z-index: 1;
+
+    font-size: calc(14px - var(--fontsize));
+    padding: 2px;
+
+    color: black;
+    background-color: var(--body-color);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;
+ 
+}
+
+.WTop-Bar{
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+
+
+    justify-content: space-between;
+    height: 24px;
+
+    align-items: center;
+    padding: 0px 2px 0px 2px;
+    margin-bottom: 2px;
+
+    background-color: var(--terbody-color);
+    color: var(--body-color);
+
+    line-height: 0;
+}
+
+.WTop-Bar div{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    flex-wrap: nowrap;
+    padding-left: 2px;
+}
+
+.WTop-Bar div p{
+    left: 6px;
+    top: 2px;
+    text-align: left;
+}
+
+.WTop-Bar div img{
+    transform: translateX(-1px)translateY(3px);
+
+    width: 20px;
+    height: 20px;
+}
+
+.WTop-Bar div button img{
+    left: auto;
+    top: auto;
+}
+
+.WTop-Bar div button{
+    height: 20px;
+    width: 20px;
+
+    background-color: var(--body-color);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;
+    
+    line-height: 0px;
+}
+
+.WTop-Bar div button:active{
+    background-color: var(--secbody-color);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: black white white black;
+    
+    line-height: 0px;
+}
+
+.WTop-Bar div button img{
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+
+    line-height: 0px;
+
+    transform: translate(-50%, -50%);
+    width: 11px;
+
+    -webkit-user-drag:none;
+}
+
+.WContent{
+    margin: 0px;
+    padding: 0;
+
+    margin-top: 15px;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 27px);
+}
+
+.WNotes{
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--terbody-color) white  white var(--terbody-color);
+
+    background-color: #feffdf;
+}
+
+.Wsided-left{
+    display: flex;
+
+}
+
+
+/*Start Menu*/
+
+
+#minmenu{
+    position:absolute;
+    z-index: 999999999999999;
+    padding: 2px;
+
+    margin: 0;
+    font-size: calc(14px - var(--fontsize));
+
+    color: black;
+    background-color: var(--body-color);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;    
+
+    width: auto;
+    max-width: 200px;
+    width: 200px;
+}
+
+#minmenu img{
+
+    display: block;    
+}
+
+#minmenu div button{
+    border: none;
+    background-color: transparent;
+    text-align: start;
+
+    height: 40.45px;
+
+    display: flex;
+        gap: 4px;
+        vertical-align: middle;
+
+    align-items: center;
+}
+
+#minmenu div button img{
+    display: flex;
+
+    position: relative;
+    height: 30px;
+    vertical-align: middle;
+}
+
+#minmenu div button:hover{
+    background-color: var(--selection-color);
+    color: white;
+}
+
+#minmenu div hr{
+    border-width: 2px;
+    border-color: var(--terbody-color) white white var(--terbody-color);
+    border-style: solid;
+
+    width: 95%;
+}
+
+#minmenu div button:hover .arrow{
+    filter: invert();
+}
+
+#secmenu{
+    position:absolute;
+    z-index: 999999999999999;
+    padding: 2px;
+
+    margin: 0;
+    font-size: calc(14px - var(--fontsize));
+
+    color: black;
+    background-color: var(--body-color);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;    
+
+    width: auto;
+    max-width: 200px;
+    width: 200px;
+}
+#secmenu button{
+    border: none;
+    background-color: transparent;
+    text-align: start;
+
+    height: 25px;
+
+    display: flex;
+    gap: 4px;
+    vertical-align: middle;
+
+    align-items: center;
+    width: 100%;
+}
+
+#secmenu button:hover{
+    background-color: var(--selection-color);
+    color: white;
+}
+
+#secmenu button:hover .arrow{
+    filter: invert();
+}
+
+#secmenu button img{
+    max-height: 20px;
+
+}
+
+.arrow{
+    width: 20px;
+    position: absolute;
+    right: 0;
+}
+
+/* DESKTOP */
+
+.overlay{
+    height: 100%;
+    padding: 4px;
+}
+
+.desktop_button{
+    display: block;
+
+    width: 90px;
+    height: 80px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+
+    background-color: transparent;
+
+    color: white;
+    font-weight: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop_button:hover p, .desktop_button:hover .appicon{
+    background-color: var(--selection-color);
+}
+
+.desktop_button p{
+    text-wrap: wrap;
+    word-wrap: break-word;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 4px;
+    margin: 0;
+}
+
+.appicon{
+    width: 40px;
+}
+
+.appdecor{
+    position: absolute;
+
+    transform: translate(-40px, 8px);
+}

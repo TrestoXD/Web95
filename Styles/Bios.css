@@ -1,0 +1,76 @@
+/* FUENTE DE TEXTO DE LA BIOS */
+@font-face {
+    font-family: GNU Unifont;
+    src: url(unifont-17.0.03.otf);
+}
+
+:root{
+/* COLOR PRIMARIO (FONDO) */
+--color_prim: rgb(0,0,0);
+
+/* COLOR SECUNDARIO */
+--color_sec: rgb(191, 191, 191);
+
+}
+
+body{
+    font-family: GNU Unifont;
+    font-size: 20px;
+
+    color: var(--color_sec);
+    background-color: var(--color_prim);
+
+    text-align: center;
+}
+
+.title{
+    color: var(--color_sec);
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+/* EL ENTRY SE REFIERE A EL SECTION DONDE SE ENCUENTRAN LOS BOTONES DE SELECCIÓN */
+select{
+    border: 2px var(--color_sec) solid;
+
+    padding: 4px;
+    
+    line-height: 0px;
+    gap: 0px;
+
+    height: 80vh;
+    width: 80%;
+
+    overflow: hidden;
+    background-color: transparent;
+}
+
+select:focus{
+    outline: none;
+}
+
+option{
+    font-family: GNU Unifont;
+    background-color: transparent;
+    border: none;
+
+    color: var(--color_sec) ;
+
+    font-size: 20px;
+    width: calc(100% - 4px);
+
+    text-align: start;
+}
+
+option:hover, option:checked, option:focus, option:active{
+    background-color: var(--color_sec);
+    color: var(--color_prim);
+}
+
+footer{
+    line-height: 2px;
+    padding-left: 75px;
+}

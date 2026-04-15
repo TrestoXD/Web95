@@ -1,0 +1,119 @@
+function WindowExe(title, width, height, img ,maximizable, ontop, content){
+    let icon;
+
+    //TotalWindows
+    localStorage.setItem("totalsoft", parseInt(localStorage.getItem('totalsoft'))+1)
+    console.log("LocalStorage-windowexe:",localStorage.getItem("totalsoft"));
+
+    //Window
+    const mainDiv = document.createElement("win" + localStorage.getItem("totalsoft"));
+    let ide = "win" + localStorage.getItem("totalsoft");
+    let top = localStorage.getItem("totalsoft");
+    console.log("el id es " + ide)
+    let maxbt = ('max' + top)
+    console.log("el id del boton es:" + maxbt)
+    let btide = ('bt' + top)
+
+    mainDiv.classList.add("Window")
+    mainDiv.id = ide;
+    mainDiv.style.width = width + 'px';
+    mainDiv.style.height= height + 'px';
+    mainDiv.style.right = (window.innerWidth / 3) + 'px';
+    mainDiv.style.bottom = (window.innerHeight / 3) + 'px';
+    mainDiv.style.zIndex = 1;
+
+
+    if( img == null){
+        icon = null;
+    }else{
+        icon = ("./Styles/AppIcons/"+img);
+    }
+
+    if(ontop == true){
+        mainDiv.style.zIndex = 1;
+    } else{
+        mainDiv.style.zIndex = 1;
+    }
+
+    if(maximizable == true){
+        if(icon == null){
+            mainDiv.innerHTML = `        
+            <div class="WTop-Bar" id="${top}"> 
+                <div><p>${title}</p> </div> 
+                <div> 
+                    <button onclick="minimizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/minimize.svg" alt="0"> </button> 
+                    <button id="${btide}" onclick="maximizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/maximize.svg" alt="1" id="${maxbt}"> </button>
+                    <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg" alt="r"> </button>
+                </div>   
+            </div>` + content;
+        }else{
+            mainDiv.innerHTML = `        
+            <div class="WTop-Bar" id="${top}"> 
+                <div> <img src="${icon}" class="icon"> <p>${title}</p> </div> 
+                <div> 
+                    <button onclick="minimizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/minimize.svg" alt="0"> </button> 
+                    <button id="${btide}" onclick="maximizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/maximize.svg" alt="1" id="${maxbt}"> </button>
+                    <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg" alt="r"> </button>
+                </div>   
+            </div>` + content;
+        }
+    } else{
+        if(icon == null){
+            mainDiv.innerHTML = `        
+            <div class="WTop-Bar" id="${top}"> 
+                <div> <p>${title}</p> </div> 
+                <div> 
+                    <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg" alt="r"> </button>
+                </div>   
+            </div>` + content;
+        }else{
+            mainDiv.innerHTML = `        
+            <div class="WTop-Bar" id="${top}"> 
+                <div> <img src="${icon}"> <p>${title}</p> </div> 
+                <div> 
+                    <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg" alt="r"> </button>
+                </div>   
+            </div>` + content;
+        }
+    }
+
+    const currentDiv = document.getElementById("div1");
+    document.body.insertBefore(mainDiv, currentDiv);
+    //App in Taskbar
+
+    const currentTaskbar = document.getElementById("Apps");
+    const mainButton = document.createElement("button");
+
+    mainButton.classList.add('taskbar-button');
+    mainButton.id = 'btt' + localStorage.getItem("totalsoft");
+    if(icon == null){
+        mainButton.innerHTML = `<p>${title}</p>`
+    }else{
+        mainButton.innerHTML = `<img src="${icon}"> <p>${title}</p>`
+    }
+
+    currentTaskbar.insertAdjacentElement('beforeend', mainButton)
+
+    currentselected = localStorage.getItem("currentselected")
+
+    if(currentselected == 0){
+        currentselected = top;
+        localStorage.setItem("currentselected", top);
+        document.getElementById(top).style.backgroundColor = "var(--selection-color)";
+        document.getElementById(top).style.color = "white";
+        document.getElementById('win'+top).style.zIndex = 40;    
+    }else{
+
+        document.getElementById(currentselected).style.backgroundColor = color_deselected;
+        document.getElementById(currentselected).style.color = "var(--body-color)";
+        document.getElementById('win'+currentselected).style.zIndex = 1;   
+        
+        currentselected = top;
+        localStorage.setItem("currentselected", top);
+        document.getElementById(top).style.backgroundColor = "var(--selection-color)";
+        document.getElementById(top).style.color = "white";
+        document.getElementById('win'+top).style.zIndex = 40;    
+    }
+}
+
+//Nota: Una ventana tendría que tratarse como un objeto separado, con métodos para saber su id, estado, etc. Así podría funcionar el botón de "Cerrar" en el "Bienvenido"

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop 0.1</title>
+    <link rel="stylesheet" href="./Styles/OS.css">
+    <link rel="stylesheet" href="./Styles/Softwares.css">
+    <link rel="stylesheet" href="./Styles/ExternalSoftwares.css">
+    <link rel="shortcut icon" href="./Styles/icons/start9x.png" type="image/x-icon">
+</head>
+<body class="Desktop" id="Desktop">
+
+    <div id="Overlay" class="overlay">
+        <button ondblclick="PapeleraExe()" class="desktop_button"><img class="appicon" src="./Styles/AppIcons/emptyreciclebin.ico"> <p>Recycle bin</p></button>
+        <button ondblclick="MycomputerEXE()" class="desktop_button"><img class="appicon" src="./Styles/AppIcons/mycomputer.ico"> <p>My Computer</p> </button>
+        <button ondblclick="WellcomeExe()" class="desktop_button"><img class="appicon" src="./Styles/icons/System/windowslogo.ico"> <img src="./Styles/icons/System/Shortcut.ico" alt="" class="appdecor"> <p>Welcome.bat</p></button>
+    </div>
+    <div>
+    </div>
+
+    <img src="./Styles/images/Stupid/IJI5FDKR72RUZAKGPVKFGEBWPHO6JZC3.gif" style="width: 400px; position: fixed; left: 50%; top: 50%; z-index: -10; transform: translate(-50%, -50%);">
+    <img src="./Styles/images/Stupid/website-under-construction-image-6.gif" style="width: 100px; position: fixed; left: 50%; top: 25%; z-index: -10; transform: translate(-50%, -100%);">
+
+</body>
+<footer class="Taskbar">
+    <div>
+        <button id="StartButton" class="StartButton" onclick="mainmenuExe()"><img src="./Styles/icons/System/windowsstartlogo.png"><p>Start</p></button>
+        <hr>
+    </div>
+    <div class="Apps" id="Apps">
+    </div>
+    <div>
+        <hr>
+        <div class="Social">
+            <button onclick="window.open('https://www.instagram.com/trestoxd/')"><img src="./Styles/AppIcons/camera-0.png" alt="Instagram"></button>
+            <button onclick="window.open('https://www.youtube.com/@Tresto_XD')"><img src="./Styles/AppIcons/youtube.png" alt="Youtube"></button>
+            <button onclick="window.open('https://www.tiktok.com/@tresto_xd?_r=1&_t=ZN-95Py80ekmso')"><img src="./Styles/AppIcons/tiktok.png" alt="Tiktok"></button>
+        </div>
+        <hr>
+        <div class="Widgets">
+            <button id="widget-sound"><img src="./Styles/icons/System/sound.png"></button>
+            <p id="widget-time">00:00</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Managers del sistema -->
+    <script src="./Scripts/System/Managers/WindowManager.js"></script>
+    <script src="./Scripts/System/Managers/ContextmenuManager.js"></script>
+    <script src="./Scripts/System/Softwares/displayexe.js"></script>
+    <script src="./Scripts/System/NotificationEXE.js"></script>
+    <script src="./Scripts/System/Managers/StartManager.js"></script>
+
+    <!-- PROCESOS INICALES DEL SISTEMA -->
+    <script src="./Scripts/System/Time.js"></script>
+    <script src="./Scripts/System/ErrorsExe.js"></script>
+    <script src="./Scripts/System/WindowExe.js"></script>
+    <script src="./Scripts/System/contextmenuExe.js"></script>
+    <script src="./Scripts/System/rightclick.js"></script>
+    <script src="./Scripts/System/winmenu.js"></script>
+    <script src="./Scripts/System/mainmenu.js"></script>
+    <script src="./Scripts/System/winmenu2.js"></script>
+
+    <!-- SOFTWARES DEL SISTEMA -->
+    <script src="./Scripts/System/Softwares/wellcome.js"></script>
+    <script src="./Scripts/System/Softwares/readmeexe.js"></script>
+    <script src="./Scripts/System/Softwares/cmdexe.js"></script>
+    <script src="./Scripts/System/Softwares/sobremiEXE.js"></script>
+    <script src="./Scripts/System/Softwares/papeleraexe.js"></script>
+    <script src="./Scripts/System/Softwares/mycommputer.js"></script>
+    
+    
+    <!-- SOFTWARES EXTERNOS -->
+    <script src="./Scripts/External/Softwares/logger.js"></script>
+    <script src="./Scripts/External/Softwares/mediaplayer.js"></script>
+    <script src="./Scripts/External/Softwares/newsletter.js"></script>
+    
+
+</html>
