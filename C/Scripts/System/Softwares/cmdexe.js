@@ -1,12 +1,13 @@
 
 
 function CmdEXE(){
-    WindowExe('COMMAND PROMPT', 400, 200, 'msdos1.png', true, true, `
+    WindowExe('MS-DOS Prompt', 400, 200, 'msdos1.png', true, true, `
     <div class="Command-prompt" id="Commandprompt" onclick="document.getElementById('inputcommand').focus()"> 
     
-    <p>Vito Minaya González CC0 1.0 Universal</p>
+    <p>Vito Minaya González MIT License</p>
+    <p>     (C)Copyright Vito Minaya González 2026.</p>
     
-    <span> C : \ Office > </span><input type="text" id="inputcommand" autocomplete="off"> 
+    <span> C:&#92;Web95 > </span><input type="text" id="inputcommand" autocomplete="off"> 
     
     </div>
         `)
@@ -31,7 +32,7 @@ function CMDINPUT(e){
 
         //Comando default
         if(commandValue == ""){
-            result.innerHTML = `<span> C : \ Office > </span><input type="text" id="inputcommand">`
+            result.innerHTML = `<span> C:&#92;Web95 > </span><input type="text" id="inputcommand">`
             document.getElementById('inputcommand').outerHTML = '';
         }
 
@@ -40,7 +41,7 @@ function CMDINPUT(e){
             result.innerHTML = `
             <p> Borratela tú. </p>`
 
-            newPrompt.innerHTML = `<span> C : \ Office > </span><input type="text" id="inputcommand">`
+            newPrompt.innerHTML = `<span> C:&#92;Web95 > </span><input type="text" id="inputcommand">`
             document.getElementById('inputcommand').outerHTML = `<span>${commandValue}</span>`; 
         }
 
@@ -49,7 +50,7 @@ function CMDINPUT(e){
             result.innerHTML = `
             <p> ${commandValue} is not recognized as an internal or external command. </p>`
 
-            newPrompt.innerHTML = `<span> C : \ Office > </span><input type="text" id="inputcommand">`
+            newPrompt.innerHTML = `<span> C:&#92;Web95 > </span><input type="text" id="inputcommand">`
             document.getElementById('inputcommand').outerHTML = `<span>${commandValue}</span>`; 
         }
 

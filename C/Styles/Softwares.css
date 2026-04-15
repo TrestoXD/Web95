@@ -1,6 +1,8 @@
 @font-face {
     font-family: CMD;
-    src: url("./Fonts/clacon2.ttf");
+    src: url("./Fonts/CMD.ttf");
+    font-smooth: none;
+    image-rendering: pixelated;
 }
 
 .disabled{
@@ -73,6 +75,7 @@ hr{
 
     overflow-y:auto;
     overflow-x:auto;
+    font-weight:lighter;
 }
 .Command-prompt p {
     font-family: CMD;
@@ -81,11 +84,15 @@ hr{
 
     word-break:normal;
     height: auto;
+    margin: 0;
+    font-weight:lighter;
 }
 .Command-prompt span{
     font-family: CMD;
     color: white;
     word-spacing: -2px;
+    margin: 0;
+    font-weight:lighter;
 }
 .Command-prompt input{
     border: none;
@@ -95,6 +102,8 @@ hr{
 
     box-sizing: border-box;
     width: 70%;
+    margin: 0;
+    font-weight:lighter;
 }
 .Command-prompt input:focus{
     outline: none;

@@ -23,10 +23,11 @@ function WellcomeExe(){
                     <div style="padding-top:20px"> <b>Did you know...</b> <p id="welcomefact">Texto...</p> </div>      
                 </div>
                 <div style="margin-top: 25px; margin-right:10px; display:flex; flex-direction:column;">
-                    <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=loggerEXE()> Development Logs </button>
-                    <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=MediaplayerEXE()> Media Player </button>
-                    <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=NoticiasEXE()> Newsletter </button>
-                    <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=RandomFact()> Next Tip </button>
+                    <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=loggerEXE()> <span class="underline">W</span>indows Tour </button>
+                    <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=MediaplayerEXE()> What's <span class="underline">N</span>ew </button>
+                    <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=NoticiasEXE()> My <span class="underline">C</span>omputer </button>
+                    <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=RandomFact()> Next <span class="underline">T</span>ip </button>
+                    <hr style="margin-top:80px;">
                 </div>
             </div>
             <div class="Wsided-left"> 
