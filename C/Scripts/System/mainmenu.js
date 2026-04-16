@@ -1,3 +1,25 @@
+//Variables
+let mainmenustate = false;
+
+function mainmenuButton(){
+    if(mainmenustate == false){
+        mainmenuExe();
+        mainmenustate = true;
+        console.log("Button is now true?: " + mainmenustate);
+    }else{
+        mainmenuRemove();
+        console.log("Button is now false?: " + mainmenustate);
+    }
+}
+function mainmenuRemove(){
+    document.getElementById("minmenu").remove();
+    try {
+        document.getElementById("secmenu").remove();
+    } catch (error) {
+        
+    }
+    mainmenustate = false;
+}
 
 function mainmenuExe(){
     console.log("opening menu...")

@@ -51,15 +51,16 @@ function mouseDown(e){
         }else if(e.target.classList.contains("taskbar-button")){
             console.log("en boton de la barra de tareas")
             deminimizeWindow(e.target.id.replace("btt", ""))
-        }
-        else{
+        }else if(e.target.classList.contains("overlay")){
             console.log(e.target)
             try {
-                document.getElementById("minmenu").outerHTML = ''   
+                mainmenuRemove();
                 //document.getElementById("secmenu").outerHTML = ''   
             } catch (error) {
                 console.log("no contextmenu exists")
             }
+        }else{
+            console.log(e.target.id)
         }
 }
 
