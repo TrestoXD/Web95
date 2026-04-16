@@ -1,6 +1,13 @@
 function WindowExe(title, width, height, img ,maximizable, ontop, content){
     let icon;
 
+    try {
+        mainmenuRemove();
+        //document.getElementById("secmenu").outerHTML = ''   
+    } catch (error) {
+        console.log("no contextmenu exists")
+    }
+
     //TotalWindows
     localStorage.setItem("totalsoft", parseInt(localStorage.getItem('totalsoft'))+1)
     console.log("LocalStorage-windowexe:",localStorage.getItem("totalsoft"));
@@ -30,7 +37,7 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
     }
 
     if(ontop == true){
-        mainDiv.style.zIndex = 1;
+        mainDiv.style.zIndex = 9999;
     } else{
         mainDiv.style.zIndex = 1;
     }

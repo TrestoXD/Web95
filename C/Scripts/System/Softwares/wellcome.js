@@ -16,16 +16,16 @@ window.onload = function(){
 function WellcomeExe(){
     WindowExe('Welcome',600, 350, null ,false, false,`        
         <div class="WContent" style="padding-left:20px; padding-right:20px; margin-top: 25px;"> 
-            <h1>Welcome to my Devlog</h1>
+            <h1>Welcome to <span class="title-1">WEB</span> <span class="title-2">95</span></h1>
             <div class="Wsided-left"> 
                 <div class="WNotes" style="margin-top: 25px; margin-right:10px; width:365px; height:160px"> 
                     <div><img src="./Styles/icons/bulb.svg" style="width: 50px"></div> 
                     <div style="padding-top:20px"> <b>Did you know...</b> <p id="welcomefact">Texto...</p> </div>      
                 </div>
                 <div style="margin-top: 25px; margin-right:10px; display:flex; flex-direction:column;">
-                    <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=loggerEXE()> <span class="underline">W</span>indows Tour </button>
-                    <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=MediaplayerEXE()> What's <span class="underline">N</span>ew </button>
-                    <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=NoticiasEXE()> My <span class="underline">C</span>omputer </button>
+                    <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=WebhelpEXE()> What's <span class="underline">N</span>ew </button>
+                    <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=MycomputerEXE()> <span class="underline">M</span>y Computer </button>
+                    <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=CmdEXE()> Ms-<span class="underline">D</span>os Prompt </button>
                     <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=RandomFact()> Next <span class="underline">T</span>ip </button>
                     <hr style="margin-top:80px;">
                 </div>
@@ -36,29 +36,16 @@ function WellcomeExe(){
                         <input type="checkbox">
                         <img class="Checkmark" src="./Styles/icons/checkmark-disabled.svg"></img>
                     </label>
-                    <p style="margin-top:16px">Show this Welcome Screen next time you start the web</p>
+                    <p style="margin-top:16px">Show this Welcome Screen next time you start Web95</p>
                 </div>
                 <div>
-                    <button class="button" style="padding:4px; width:130px; margin-top:8px"> Close </button>
+                    <!--<button onclick="console.log()" class="button" style="padding:4px; width:130px; margin-top:8px"> Close </button>-->
                 </div>
             </div>    
         </div>`
     );
     RandomFact();
     //Recharge();
-}
-
-
-function SetupExe(){
-    WindowExe('Tresto Setup', 500, 120, null, false, `
-        <div style="display:flex; ">
-        <div> <img src="./Styles/icons/Warning.png" style="width:100px"> </div>
-        <div> 
-            <p> Setup has finished configuring the channel </p>
-            <p> You must upload a  new video before the new settings will take effect.</p>
-        </div>
-        </div>`
-    );
 }
 
 function RandomFact(){
