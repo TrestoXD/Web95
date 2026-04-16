@@ -1,5 +1,5 @@
 function MycomputerEXE(){
-    WindowExe('My Computer', 400, 350, 'mycomputer.ico', true, true, `
+    WindowExe('My Computer', 450, 400, 'mycomputer.ico', true, true, `
         <div class="explorer_topbar">
             <button class="disabled"><span class="underline">F</span>ile</button>
             <button class="disabled"><span class="underline">E</span>dit</button>
@@ -11,21 +11,21 @@ function MycomputerEXE(){
             <select>
                 <option>My Computer</option>
             </select
-            <button></button> <!-Back->
-            <button></button> <!-Cut->
-            <button></button> <!-Copy->
-            <button></button> <!-Paste->
-            <button></button> <!-Undo->
+            <button></button> <!--Back-->
+            <button></button> <!--Cut-->
+            <button></button> <!--Copy-->
+            <button></button> <!--Paste-->
+            <button></button> <!--Undo-->
         </div>
-        <div>
-            <button> <p>5&frac14; Floppy (A:)</p>
-            <button> <p>5&frac14; Floppy (B:)</p>
-            <button> <p>Windows_95(C:)</p> </button>
+        <div class="explorer_files">
+            <button> <p>5&frac14; Floppy (A:)</p></button>
+            <button> <p>5&frac14; Floppy (B:)</p></button>
+            <button> <p>MS-dos(C:)</p> </button>
             <button> <p>Control Panel</p> </button>
         </div>
         <div class="explorer_bottombar">
             <p>3 object(s)</p>
-            <p></p>
+            <p> <span class="Wbottom-expand">p</span></p>
         </div>
         `);
 }
