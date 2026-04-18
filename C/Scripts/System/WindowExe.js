@@ -24,10 +24,11 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
     mainDiv.classList.add("Window")
     mainDiv.id = ide;
     mainDiv.style.width = width + 'px';
-    mainDiv.style.height= height + 'px';
-    mainDiv.style.right = (window.innerWidth / 3) + 'px';
-    mainDiv.style.bottom = (window.innerHeight / 3) + 'px';
+    mainDiv.style.height = height + 'px';
+    mainDiv.style.left = ((window.innerWidth - width)  / 2 + 'px');
+    mainDiv.style.top = ((window.innerHeight - height)  / 2 + 'px');
     mainDiv.style.zIndex = 1;
+
 
 
     if( img == null){
