@@ -338,13 +338,47 @@ hr{
 .explorer_topbar button:hover{
     background-color: var(--selection-color);
 }
+.explorer_files_topbar{
+    display: flex;
+    flex-direction: row;
+
+    margin-left: 2px;
+}
+
+.explorer_files_topbar select{
+    width: calc(62%);
+    background-color: white;
+
+    border-color: black white white black;
+    border-style: solid;
+    border-width: 2px;
+
+    box-shadow: inset -2px -2px var(--body-color);
+}
+.explorer_files_topbar button{
+    margin: 0;
+    padding: 0;
+
+    width: 28px;
+    height: 28px;
+}
+.explorer_files_topbar button img{
+    padding: 0px;
+    margin: 0px;
+
+    width: 24px;
+    height: 24px;
+    
+    position: absolute;
+    transform: translate(-10px, -14px);
+}
 
 .explorer_files{
     margin: 2px;
     box-sizing: border-box;
 
     width: calc(100% - 4px);
-    height: calc(100% - 104px);
+    height: calc(100% - 116px);
 
     background-color: white;
 

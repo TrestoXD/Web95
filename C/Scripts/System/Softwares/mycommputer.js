@@ -7,15 +7,16 @@ function MycomputerEXE(){
             <button class="disabled"><span class="underline">H</span>elp</button>
         </div>
         <hr>
-        <div>
-            <select>
+        <div class="explorer_files_topbar">
+            <select style="margin-right:10px;">
                 <option>My Computer</option>
-            </select
-            <button></button> <!--Back-->
-            <button></button> <!--Cut-->
-            <button></button> <!--Copy-->
-            <button></button> <!--Paste-->
-            <button></button> <!--Undo-->
+            </select>
+
+            <button style="margin-right:10px;"> <img alt="Navegate" src="./Styles/icons/System/Navegate.ico"> </button> 
+            <button> <img alt="Cut" src="./Styles/icons/System/Cut.ico"> </button> 
+            <button> <img alt="Copy" src="./Styles/icons/System/Copy.ico" style="transform: translate(-12px, -10px);"> </button> 
+            <button style="margin-right:10px;"> <img alt="Paste" src="./Styles/icons/System/Paste.ico"> </button> 
+            <button> <img alt="Undo" src="./Styles/icons/System/Undo.ico"> </button>
         </div>
         <div class="explorer_files">
             <button> <p>5&frac14; Floppy (A:)</p></button>
