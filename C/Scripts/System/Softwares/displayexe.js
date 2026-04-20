@@ -1,7 +1,7 @@
 var r = document.querySelector(':root');
 
 function displayEXE(){
-    WindowExe('Display Properties', 400, 500, null, true, true, `
+    WindowExe('Display Properties', 400, 410, null, true, true, `
         <div class="display">
             <button class="display-button disabled">Background</button>
             <button class="display-button disabled">Screen Saver</button>
@@ -9,6 +9,44 @@ function displayEXE(){
             <button class="display-button disabled">Settings</button>
         </div>
         <div class="display-properties">
+        <div class="preview">
+            <div style="width:330px; height: 150px; transform: translateX(10px)translateY(10px); background-color: var(--body-color);" class="preview-Window">
+                <div class="Preview-WTop-Bar"> 
+                    <div><p>Inactive Window</p> </div> 
+                    <div> 
+                        <button> <img src="./Styles/icons/minimize.svg" alt="0"> </button> 
+                        <button> <img src="./Styles/icons/maximize.svg" alt="1"> </button>
+                        <button style="margin-left:2px"> <img src="./Styles/icons/close.svg" alt="r"> </button>
+                    </div>   
+                </div>
+            </div>
+            <div style="width:330px; height: 130px; background-color: var(--body-color); transform: translateX(16px)translateY(-115px);" class="preview-Window">
+                <div class="Preview-WTop-Bar" style="background-color: var(--selection-color); color: white;"> 
+                    <div><p>Active Window</p> </div> 
+                    <div> 
+                        <button> <img src="./Styles/icons/minimize.svg" alt="0"> </button> 
+                        <button> <img src="./Styles/icons/maximize.svg" alt="1"> </button>
+                        <button style="margin-left:2px"> <img src="./Styles/icons/close.svg" alt="r"> </button>
+                    </div>   
+                </div>
+                <div style="display:flex; flex-direction: row;">
+                    <p style=" padding: 4px; margin:0; padding-left: 6px; padding-right: 6px;">Normal</p>
+                    <p style=" padding: 4px; margin:0; padding-left: 6px; padding-right: 6px; color: var(--secbody-color); text-shadow: 1px 1px 0px white;">Disabled</p>
+                    <p style=" padding: 4px; margin:0; padding-left: 6px; padding-right: 6px; background-color: var(--selection-color); color:white;">Selected</p>
+                </div>
+            </div>
+            <div style="width:250px; height: 65px; background-color: var(--body-color); transform: translateX(22px)translateY(-180px);" class="preview-Window">
+                <div class="Preview-WTop-Bar" style="background-color: var(--selection-color); color: white;"> 
+                    <div><p>Message Box</p> 
+    
+                    </div> 
+                    <div> 
+                        <button style="margin-left:2px"> <img src="./Styles/icons/close.svg" alt="r"> </button>
+                    </div>   
+                </div>
+                Message Text
+            </div>
+        </div>
             <div class="I-2">
                 <div class="display-properties-box">
                     <h4 class="display-properties-title">Background Color</h4>
