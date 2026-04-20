@@ -126,8 +126,8 @@ function maximizeWindow(ides){
 function restoreWindow(ides){
     document.getElementById('win'+ ides).style.width = olx;
     document.getElementById('win'+ ides).style.height = oly;
-    document.getElementById('win'+ ides).style.top = olposx;
-    document.getElementById('win'+ ides).style.left = olposy;  
+    document.getElementById('win'+ ides).style.top = olposy;
+    document.getElementById('win'+ ides).style.left = olposx;  
 
     document.getElementById('max'+ ides).src = './Styles/icons/maximize.svg'
     document.getElementById('bt'+ ides).setAttribute("onClick", "maximizeWindow("+ides+");")

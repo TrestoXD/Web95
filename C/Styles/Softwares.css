@@ -52,8 +52,19 @@ hr{
     color: white;
     background-color: var(--selection-color);
 }
-.notepad div pre{
-    text-wrap: wrap;
+.notepad textarea{
+    width: 100%;
+    height: 100%;
+
+    resize: none;
+
+    border: none;
+    padding: 0;
+    padding-left: 8px;
+}
+.notepad textarea:focus{
+    border: none;
+    outline: none;
 }
 /* Welcome */
 
@@ -438,4 +449,6 @@ hr{
     padding-left: 2px;
 
     margin: 0;
+
+    user-select: none;
 }
