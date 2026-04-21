@@ -1,7 +1,7 @@
 
 
 function CmdEXE(){
-    WindowExe('MS-DOS Prompt', 400, 200, 'msdos1.png', true, true, `
+    WindowExe('MS-DOS Prompt', 400, 200, 'msdos1.ico', true, true, `
     <div class="Command-prompt" id="Commandprompt" onclick="document.getElementById('inputcommand').focus()"> 
     
     <p>Vito Minaya González MIT License</p>
