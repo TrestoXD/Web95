@@ -31,7 +31,7 @@ function mainmenuExe(){
             <div style="display:flex; flex-direction:column; width:100%;">
                 <button onmouseenter="MainmenusecExe('200px','286px',true,true, '${Programs_Menu}')"> <img src="./Styles/AppIcons/directoryprogramgroup.ico"> <p>Programs</p> <img class=arrow src=./Styles/icons/System/Arrow.ico> </button>
                 <button onmouseenter="MainmenusecExe('200px','272px',true,true, '${Documentos_Menu}')"> <img src="./Styles/AppIcons/documentsnormal.ico"> <p>Documents</p> <img class=arrow src=./Styles/icons/System/Arrow.ico> </button>
-                <button onmouseenter="MainmenusecExe('200px','182px',true,true, '${Settings_Menu}')"> <img src="./Styles/AppIcons/settingsgear.ico" style=scale:1.5;> <p>Settings</p> <img class=arrow src=./Styles/icons/System/Arrow.ico> </button>
+                <button onmouseenter="MainmenusecExe('200px','206px',true,true, '${Settings_Menu}')"> <img src="./Styles/AppIcons/settingsgear.ico" style=scale:1.5;> <p>Settings</p> <img class=arrow src=./Styles/icons/System/Arrow.ico> </button>
                 <button onmouseenter="MainmenusecExe('200px','166px',true,true, '${Find_Menu}')"> <img src="./Styles/AppIcons/searchfile.ico"> <p>Search</p> <img class="arrow" src=./Styles/icons/System/Arrow.ico> </button>
                 <button onmouseenter="Delete_MainmenusecExe()" onclick="WebhelpEXE()"> <img src=./Styles/AppIcons/helpbookbig.ico> <p>Help</p></button>
                 <button onmouseenter="Delete_MainmenusecExe()"> <img src=./Styles/AppIcons/applicationhourglass.ico> <p class="disabled">Execute</p></button>
@@ -44,5 +44,5 @@ function mainmenuExe(){
 
 let Programs_Menu = `<div> <button onclick=CmdEXE()> <img src=./Styles/AppIcons/msdos1.ico> MS-DOS Prompt</button> <button class=disabled><img src=./Styles/icons/System/WindowsExplorer.ico>Windows Explorer</button> </div>`
 let Documentos_Menu = `<div> <button onclick=ReadmeEXE()> <img src=./Styles/AppIcons/doc_Notepad.ico> Readme.txt</button> </div>`
-let Settings_Menu = `<div> <button onclick=displayEXE()>Display Properties</button> <button class=disabled>Control panel</button> <button class=disabled>Taskbar & Start Menu...</button> </div>`
+let Settings_Menu = `<div><button onclick=ControlpanelEXE()>Control panel</button> <button class=disabled>Taskbar & Start Menu...</button> </div>`
 let Find_Menu = `<div> <button class=disabled>Files or Folders...</button> <button class=disabled>On The XD Network...</button> </div>`

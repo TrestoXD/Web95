@@ -6,7 +6,7 @@ var Startsound = new Audio(Startsound_data);
 Startsound.play();
 
 settingsLoader();
-setTimeout(() => NotificationExe("You can customize your Desktop!","You can change the style of your System in Settings -> Display Properties"), 5000);
+setTimeout(() => NotificationExe("You can customize your Desktop!","You can change the style of your System in Settings -> Control Panel -> Display Properties"), 5000);
 
 
 function settingsLoader(){

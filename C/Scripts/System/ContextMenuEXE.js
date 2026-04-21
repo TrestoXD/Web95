@@ -7,6 +7,7 @@ oncontextmenu = (e) => {
 
         console.log('la x es:'+ x)
 
+        if(e.target.closest(".overlay")){
         ContextmenuExe(x +'px', y +'px', false, true, `
             <button id="conbt">Arrange Icons</Button>
             <Button id="conbt">Line Up Icons</Button> <hr></hr> 
@@ -16,5 +17,6 @@ oncontextmenu = (e) => {
             <button id="conbt">New</button> <hr></hr> 
             <button id="conbt" onclick='ErrorMenu("An error message to annoy you.", "Context menu Failed")' class='textbutt'>Properties</button>
         `);
+        }
     }
 }
