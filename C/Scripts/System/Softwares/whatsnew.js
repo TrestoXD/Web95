@@ -11,7 +11,7 @@ function NewsEXE(){
     <h1 style="margin:20px">Welcome to the news!</h1>
     <p>I've created the news! To new the new news!</p>
 <div> <!-- NEWS SECTION! -->
-    <p> 0.0.13 </p>
+    <p> 0.0.13 & 0.0.14 </p>
     <ul>
         <li>Trying to fix the buttons images on the main menu</li>
     </ul>
