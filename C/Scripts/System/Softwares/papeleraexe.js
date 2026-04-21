@@ -1,5 +1,5 @@
 function PapeleraExe(){
-    WindowExe('Papelera de reciclaje', 400, 250, 'emptyreciclebin.png', true, true, `
+    WindowExe('Recycle bin', 400, 250, 'emptyreciclebin.png', true, true, `
     <div class="papelera">
         <div class="explorer_topbar">
             <button class="disabled"><span class="underline">F</span>ile</button>
@@ -11,7 +11,7 @@ function PapeleraExe(){
             <table class="archivos-papelera-tabla" id="papelera-table">
                 <tr class="archivos-papelera-tipos">
                     <td>Name</td>
-                    <td>Localización Original</td>
+                    <td>Original Localization</td>
                     <td>Date Deleted</td>
                     <td>Type</td>
                     <td>Size</td>
@@ -20,28 +20,28 @@ function PapeleraExe(){
                     <td>SETUPLOG.TXT</td>
                     <td>C:&#92</td>
                     <td>8/1/26 14:56 </td>
-                    <td>Documento de texto</td>
+                    <td>text Document</td>
                     <td>1 KB</td>
                 </tr>
                 <tr class="archivos-papelera-archivos">
                     <td>fermium-ab5839d0afnna043</td>
                     <td>C:&#92USERS&#92PROYECTOS</td>
                     <td>3/11/25 20:41 </td>
-                    <td>Carpeta de archivos</td>
+                    <td>Folder</td>
                     <td>4.245 KB</td>
                 </tr>
                 <tr class="archivos-papelera-archivos">
                     <td>fermium-rb2894n23edq2ea</td>
                     <td>C:&#92USERS&#92PROYECTOS</td>
                     <td>3/11/25 20:36 </td>
-                    <td>Carpeta de archivos</td>
+                    <td>Folder</td>
                     <td>1 KB</td>
                 </tr>
                 <tr class="archivos-papelera-archivos">
                     <td>KAREN</td>
                     <td>C:&#92USERS&#92PROYECTOS</td>
                     <td>5/11/25 17:13 </td>
-                    <td>Carpeta de archivos</td>
+                    <td>Folder</td>
                     <td>29 KB</td>
                 </tr>
             </table>

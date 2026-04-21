@@ -47,9 +47,9 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
         if(icon == null){
             mainDiv.innerHTML = `        
             <div class="WTop-Bar" id="${top}"> 
-                <div><p>${title}</p> </div> 
+                <div><p class="WTop-Bar-detectable" id="${top}">${title}</p> </div> 
                 <div> 
-                    <button onclick="minimizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/minimize.svg" alt="0"> </button> 
+                    <button onclick="minimizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/minimize.svg" alt="0" style="transform: translate(-50%, -30%);"> </button> 
                     <button id="${btide}" onclick="maximizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/maximize.svg" alt="1" id="${maxbt}"> </button>
                     <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg" alt="r"> </button>
                 </div>   
@@ -57,9 +57,9 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
         }else{
             mainDiv.innerHTML = `        
             <div class="WTop-Bar" id="${top}"> 
-                <div> <img src="${icon}" class="icon"> <p>${title}</p> </div> 
+                <div> <img src="${icon}" class="icon WTop-Bar-detectable" id="${top}"> <p class="WTop-Bar-detectable" id="${top}">${title}</p> </div> 
                 <div> 
-                    <button onclick="minimizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/minimize.svg" alt="0"> </button> 
+                    <button onclick="minimizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/minimize.svg" alt="0" style="transform: translate(-50%, -30%);"> </button> 
                     <button id="${btide}" onclick="maximizeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/maximize.svg" alt="1" id="${maxbt}"> </button>
                     <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg" alt="r"> </button>
                 </div>   
@@ -69,7 +69,7 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
         if(icon == null){
             mainDiv.innerHTML = `        
             <div class="WTop-Bar" id="${top}"> 
-                <div> <p>${title}</p> </div> 
+                <div> <p class="WTop-Bar-detectable" id="${top}">${title}</p> </div> 
                 <div> 
                     <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg" alt="r"> </button>
                 </div>   
@@ -77,7 +77,7 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
         }else{
             mainDiv.innerHTML = `        
             <div class="WTop-Bar" id="${top}"> 
-                <div> <img src="${icon}"> <p>${title}</p> </div> 
+                <div> <img src="${icon}" class="icon WTop-Bar-detectable" id="${top}"> <p class="WTop-Bar-detectable" id="${top}">${title}</p> </div> 
                 <div> 
                     <button style="margin-left:2px" onclick="closeWindow('${localStorage.getItem("totalsoft")}')"> <img src="./Styles/icons/close.svg" alt="r"> </button>
                 </div>   

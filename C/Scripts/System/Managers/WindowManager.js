@@ -24,7 +24,7 @@ function mouseDown(e){
         if(e.target.id == "minmenu" | e.target.id == "minmenus" | e.target.id == "secmenu") {
             console.log("en context")
         
-        }else if(e.target.classList.contains("WTop-Bar")){
+        }else if(e.target.classList.contains("WTop-Bar") || e.target.classList.contains("WTop-Bar-detectable")){
             idee = e.target.id 
             if(currentselected == 0){
                 currentselected = idee;
@@ -59,6 +59,10 @@ function mouseDown(e){
             } catch (error) {
                 console.log("no contextmenu exists")
             }
+
+            document.getElementById(currentselected).style.backgroundColor = color_deselected;
+            document.getElementById(currentselected).style.color = "var(--body-color)";
+            document.getElementById('win'+currentselected).style.zIndex = 1;   
         }else{
             console.log(e.target.id)
         }

@@ -1,0 +1,26 @@
+function NewsEXE(){
+    WindowExe('Web News!', 800, 600, 'news.ico', true, false, `
+<div class="webhelp">
+    <map name="w95widget">
+        <area href="https://baccyflap.com/noai" target="_blank" shape="rect" coords="0,0,308,22" alt="no ai webring" title="no ai webring">
+        <area href="https://baccyflap.com/noai/?prv&s=vit" target="_top" shape="rect" coords="56,36,130,58" alt="previous" title="previous">
+        <area href="https://baccyflap.com/noai/?rnd" target="_top" shape="rect" coords="137,36,211,58" alt="random" title="random">
+        <area href="https://baccyflap.com/noai/?nxt&s=vit" target="_top" shape="rect" coords="218,36,292,58" alt="next" title="next">
+    </map>
+    <img usemap="#w95widget" src="https://baccyflap.com/noai/w95widget.gif" alt="a gray Windows 95 style dialog box titled 'The No AI Webring' with a little icon showing a computer chip in a rubbish bin. beside it are three clickable buttons, labeled Previous, Random... and Next"> 
+    <h1 style="margin:20px">Welcome to the news!</h1>
+    <p>I've created the news! To new the new news!</p>
+    <div> <!-- NEWS SECTION! -->
+        <p> 21/04/2026 </p> 
+        <ul>
+        <li>Fixed Some icons from the main menu (I think, maybe in some browsers, HA HA HA HA HA!)</li>
+        <li>Deleted some unused button apps in the main menu</li>
+        <li>Added to the No IA Webbing! FUCK AI!</li>
+        <li>Now The Window's Title and Icon are usable when dragging!</li>
+        <li>Besides that the My computer app is fully functionable!</li>
+        <li>The Window minimize icon is in the correct position</li>
+        </ul>     
+    </div>
+</div>
+        `)
+}

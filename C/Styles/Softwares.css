@@ -413,6 +413,14 @@ hr{
     border: none;
     background-color: transparent;
 }
+.explorer_files button img{
+    width: 44px;
+    height: 44px;
+}
+.explorer_files button:hover img{
+    background-color: var(--selection-color);
+}
+
 .explorer_files button p{
     margin: 0;
     padding: 2px;

@@ -820,6 +820,8 @@ button, select{
     border-color: white black black white;
     
     line-height: 0px;
+
+    box-shadow: -1px -1px var(--terbody-color) inset;
 }
 
 .WTop-Bar div button:active{
@@ -843,6 +845,10 @@ button, select{
     width: 11px;
 
     -webkit-user-drag:none;
+}
+
+.WTop-Bar-detectable{
+    display: flex;
 }
 
 .WContent{

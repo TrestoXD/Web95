@@ -23,7 +23,7 @@ function WellcomeExe(){
                     <div style="padding-top:20px"> <b>Did you know...</b> <p id="welcomefact">Texto...</p> </div>      
                 </div>
                 <div style="margin-top: 25px; margin-right:10px; display:flex; flex-direction:column;">
-                    <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=WebhelpEXE()> What's <span class="underline">N</span>ew </button>
+                    <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=NewsEXE()> What's <span class="underline">N</span>ew </button>
                     <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=MycomputerEXE()> <span class="underline">M</span>y Computer </button>
                     <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=CmdEXE()> Ms-<span class="underline">D</span>os Prompt </button>
                     <button class="button" style="padding:4px; width:130px; margin-bottom:8px" onclick=RandomFact()> Next <span class="underline">T</span>ip </button>

@@ -19,13 +19,13 @@ function MycomputerEXE(){
             <button> <img alt="Undo" src="./Styles/icons/System/Undo.ico"> </button>
         </div>
         <div class="explorer_files">
-            <button> <p>5&frac14; Floppy (A:)</p></button>
-            <button> <p>5&frac14; Floppy (B:)</p></button>
-            <button> <p>MS-dos(C:)</p> </button>
-            <button> <p>Control Panel</p> </button>
+            <button ondblclick='ErrorMenu("An error ocurred when trying to open the drive. Unable to load the Drive.", "Drive is unaccesible")'> <img src="./Styles/AppIcons/DriveFloppy.ico"> <p>5&frac14; Floppy (A:)</p></button>
+            <button ondblclick='ErrorMenu("Please insert the disk labeled, and then click OK.", "Insert Disk")'> <img src="./Styles/AppIcons/DriveFloppy.ico"> <p>5&frac14; Floppy (B:)</p></button>
+            <button ondblclick='ErrorMenu("An error ocurred when trying to open the drive. Unable to load the Drive.", "Drive is unaccesible")'> <img src="./Styles/AppIcons/Drive.ico"> <p>MS-dos(C:)</p> </button>
+            <button ondblclick='ErrorMenu("An error ocurred when trying to open the drive. Unable to load the Drive.", "Drive is unaccesible")'> <img src="./Styles/AppIcons/ControlsFolder.ico"> <p>Control Panel</p> </button>
         </div>
         <div class="explorer_bottombar">
-            <p>3 object(s)</p>
+            <p>4 object(s)</p>
             <p> <span class="Wbottom-expand">p</span></p>
         </div>
         `);
