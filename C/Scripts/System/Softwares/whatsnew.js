@@ -11,7 +11,11 @@ function NewsEXE(){
     <h1 style="margin:20px">Welcome to the news!</h1>
     <p>I've created the news! To new the new news!</p>
     <div> <!-- NEWS SECTION! -->
-        <p> 21/04/2026 </p> 
+        <p> 0.0.12 </p>
+        <ul>
+            <li>I didn't add the version title correctly on the news! My fault!</li>
+        </ul>
+        <p> 0.0.11 </p> 
         <ul>
         <li>Fixed Some icons from the main menu (I think, maybe in some browsers, HA HA HA HA HA!)</li>
         <li>Deleted some unused button apps in the main menu</li>
