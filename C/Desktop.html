@@ -21,7 +21,7 @@
     <img src="./Styles/images/Stupid/website-under-construction-image-6.gif" style="width: 100px; position: fixed; left: 50%; top: 25%; z-index: -10; transform: translate(-50%, -100%);">
 
 </body>
-<footer class="Taskbar">
+<footer class="Taskbar" id="taskbar">
     <div>
         <button id="StartButton" class="StartButton" onclick="mainmenuButton()"><img src="./Styles/icons/System/windowsstartlogo.png"><p>Start</p></button>
         <hr>
@@ -29,18 +29,10 @@
     <div class="Apps" id="Apps">
     </div>
     <div>
-        <hr>
-        <div class="Social">
-            <button onclick="window.open('https://discord.gg/xn3VcQkMWh')"><img src="./Styles/AppIcons/discord.png" alt="discord"></button>
-            <button onclick="window.open('https://github.com/TrestoXD')"><img src="./Styles/AppIcons/github.png" alt="github"></button>
-            <button onclick="window.open('https://www.instagram.com/trestoxd/')"><img src="./Styles/AppIcons/camera-0.png" alt="Instagram"></button>
-            <button onclick="window.open('https://www.youtube.com/@Tresto_XD')"><img src="./Styles/AppIcons/youtube.png" alt="Youtube"></button>
-            <button onclick="window.open('https://www.tiktok.com/@tresto_xd?_r=1&_t=ZN-95Py80ekmso')"><img src="./Styles/AppIcons/tiktok.png" alt="Tiktok"></button>
-        </div>
-        <hr>
-        <div class="Widgets">
-            <button onclick="SoundmenuEXE()"><img src="./Styles/icons/System/sound.png"></button>
-            <button onclick=""> <p id="widget-time" style="user-select: none;">00:00</p> </button>
+        
+        <hr id="Widgets_hr">
+        <div class="Widgets" id="Widgets">
+            
         </div>
     </div>
 </footer>

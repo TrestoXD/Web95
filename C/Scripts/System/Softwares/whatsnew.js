@@ -11,6 +11,12 @@ function NewsEXE(){
     <h1 style="margin:20px">Welcome to the news!</h1>
     <p>I've created the news! To new the new news!</p>
 <div> <!-- NEWS SECTION! -->
+    <p> 0.0.16 </p>
+    <ul>
+        <li>Start manager added cusomizable Taskbar</li>
+        <li>Control panel adjusted height</li>
+        <li>My Computer accesible control pannel</li>
+    </ul>
     <p> 0.0.15 </p>
     <ul>
         <li>Main menu icons fixed</li>

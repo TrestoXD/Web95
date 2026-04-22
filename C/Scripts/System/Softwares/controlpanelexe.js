@@ -1,5 +1,5 @@
 function ControlpanelEXE(){
-    WindowExe('Control Panel', 400, 410, null, true, true, `
+    WindowExe('Control Panel', 400, 400, null, true, true, `
     
     <div class="explorer_topbar">
             <button class="disabled"><span class="underline">F</span>ile</button>
@@ -7,7 +7,7 @@ function ControlpanelEXE(){
             <button class="disabled"><span class="underline">V</span>iew</button>
             <button class="disabled"><span class="underline">H</span>elp</button>
     </div>
-    <div class="explorer_files">
+    <div class="explorer_files" style="height: calc(100% - 58px);">
         <button onclick=displayEXE()> <img alt="Navegate" src="./Styles/appicons/display.ico"> <p>Display</p></button>
     </div>
     `)

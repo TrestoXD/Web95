@@ -386,6 +386,7 @@ hr{
 
 .explorer_files{
     margin: 2px;
+    padding: 4px;
     box-sizing: border-box;
 
     width: calc(100% - 4px);
