@@ -46,11 +46,13 @@ hr{
 .notepad button{
     border: none;
     background-color: transparent;
+
+    box-shadow: none;
 }
 
 .notepad button:hover{
     color: white;
-    background-color: var(--selection-color);
+    background: var(--selection-color);
 }
 .notepad textarea{
     width: 100%;
@@ -59,11 +61,13 @@ hr{
     resize: none;
 
     border: none;
+    box-shadow: none;
     padding: 0;
     padding-left: 8px;
 }
 .notepad textarea:focus{
     border: none;
+    box-shadow: none;
     outline: none;
 }
 /* Welcome */
@@ -118,7 +122,7 @@ hr{
 .Command-prompt input{
     border: none;
     background-color: transparent;
-
+    box-shadow: none;
     color: white;
 
     box-sizing: border-box;
@@ -159,11 +163,12 @@ hr{
 .papelera button{
     border: none;
     background-color: transparent;
+    box-shadow: none;
 }
 
 .papelera button:hover{
     color: white;
-    background-color: var(--selection-color);
+    background: var(--selection-color);
 }
 
 .papelerainfo{
@@ -197,6 +202,7 @@ hr{
     height: 165px;
 
     border: none;
+    box-shadow: none;
 
     border-style: solid;
     border-width: 2px;
@@ -228,6 +234,7 @@ hr{
     margin: 2px;
 
     border: none;
+    box-shadow: none;
 
     background-color: white;
 }
@@ -341,13 +348,14 @@ hr{
 
     background-color: transparent;
     border: none;
+    box-shadow: none;
 }
 .explorer_topbar button p{
     margin: 0;
     margin-top: 6px;
 }
 .explorer_topbar button:hover{
-    background-color: var(--selection-color);
+    background: var(--selection-color);
 }
 .explorer_files_topbar{
     display: flex;
@@ -412,6 +420,7 @@ hr{
     margin: 0;
 
     border: none;
+    box-shadow: none;
     background-color: transparent;
 }
 .explorer_files button img{
@@ -419,7 +428,7 @@ hr{
     height: 44px;
 }
 .explorer_files button:hover img{
-    background-color: var(--selection-color);
+    background: var(--selection-color);
 }
 
 .explorer_files button p{
@@ -428,7 +437,7 @@ hr{
 }
 .explorer_files button:hover p{
     color: white;
-    background-color: var(--selection-color);
+    background: var(--selection-color);
 }
 
 .explorer_bottombar{
@@ -460,4 +469,11 @@ hr{
     margin: 0;
 
     user-select: none;
+}
+
+.whatnewnew{
+    box-sizing: border-box;
+    overflow-y: auto;
+
+    height: calc(100% - 130px);
 }

@@ -21,7 +21,7 @@ function displayEXE(){
                 </div>
             </div>
             <div style="width:330px; height: 130px; background-color: var(--body-color); transform: translateX(16px)translateY(-115px);" class="preview-Window">
-                <div class="Preview-WTop-Bar" style="background-color: var(--selection-color); color: white;"> 
+                <div class="Preview-WTop-Bar" style="background: var(--selection-color); color: white;"> 
                     <div><p>Active Window</p> </div> 
                     <div> 
                         <button> <img src="./Styles/icons/minimize.svg" alt="0"> </button> 
@@ -36,7 +36,7 @@ function displayEXE(){
                 </div>
             </div>
             <div style="width:250px; height: 65px; background-color: var(--body-color); transform: translateX(22px)translateY(-180px);" class="preview-Window">
-                <div class="Preview-WTop-Bar" style="background-color: var(--selection-color); color: white;"> 
+                <div class="Preview-WTop-Bar" style="background: var(--selection-color); color: white;"> 
                     <div><p>Message Box</p> 
     
                     </div> 
@@ -63,6 +63,7 @@ function displayEXE(){
                     <h4 class="display-properties-title">Selection Color</h4>
                     <select name="background" id="background" class="display-properties-select" onchange="displayselectionchange(this.value)">
                         <option value="#000080">Classic</option>
+                        <option value="linear-gradient(90deg,#002060 0%, #a0c8ef 100%)">Me</option>
                         <option value="#a85400">Highliter</option>
                         <option value="#00a800">Plant</option>
                         <option value="#800000">Brick</option>

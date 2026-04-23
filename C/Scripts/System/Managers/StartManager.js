@@ -33,7 +33,7 @@ if(volume_widget){
     const volumepos = document.getElementById("Widgets");
 
     volumediv.innerHTML = `
-        <button id="Volume_Widget" onclick="SoundmenuEXE()"> <img src="./Styles/icons/System/sound.png"> </button>
+        <button id="Volume_Widget" class="button_noborder" onclick="SoundmenuEXE()"> <img src="./Styles/icons/System/sound.png"> </button>
     `
     volumepos.innerHTML += volumediv.innerHTML
 }
@@ -47,7 +47,7 @@ if(time_widget){
     const timepos = document.getElementById("Widgets");
 
     timediv.innerHTML = `
-        <button id="Time_Widget"> <p id="widget-time" style="user-select: none;">00:00</p> </button>
+        <button id="Time_Widget" class="button_noborder"> <p id="widget-time" style="user-select: none;">00:00</p> </button>
     `
     timepos.innerHTML += timediv.innerHTML
 }
@@ -63,11 +63,11 @@ if(socialmedia_widget){
     socialdiv.classList = "Social";
     socialdiv.innerHTML = `
         <hr id="Widgets_hr">
-        <button onclick="window.open('https://discord.gg/xn3VcQkMWh')"><img src="./Styles/AppIcons/discord.png" alt="discord"></button>
-        <button onclick="window.open('https://github.com/TrestoXD')"><img src="./Styles/AppIcons/github.png" alt="github"></button>
-        <button onclick="window.open('https://www.instagram.com/trestoxd/')"><img src="./Styles/AppIcons/camera-0.png" alt="Instagram"></button>
-        <button onclick="window.open('https://www.youtube.com/@Tresto_XD')"><img src="./Styles/AppIcons/youtube.png" alt="Youtube"></button>
-        <button onclick="window.open('https://www.tiktok.com/@tresto_xd?_r=1&_t=ZN-95Py80ekmso')"><img src="./Styles/AppIcons/tiktok.png" alt="Tiktok"></button>
+        <button class="button_noborder" onclick="window.open('https://discord.gg/xn3VcQkMWh')"><img src="./Styles/AppIcons/discord.png" alt="discord"></button>
+        <button class="button_noborder" onclick="window.open('https://github.com/TrestoXD')"><img src="./Styles/AppIcons/github.png" alt="github"></button>
+        <button class="button_noborder" onclick="window.open('https://www.instagram.com/trestoxd/')"><img src="./Styles/AppIcons/camera-0.png" alt="Instagram"></button>
+        <button class="button_noborder" onclick="window.open('https://www.youtube.com/@Tresto_XD')"><img src="./Styles/AppIcons/youtube.png" alt="Youtube"></button>
+        <button class="button_noborder" onclick="window.open('https://www.tiktok.com/@tresto_xd?_r=1&_t=ZN-95Py80ekmso')"><img src="./Styles/AppIcons/tiktok.png" alt="Tiktok"></button>
     `
     socialpos.parentNode.insertBefore(socialdiv, socialpos)
 }

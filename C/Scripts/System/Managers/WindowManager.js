@@ -29,18 +29,18 @@ function mouseDown(e){
             if(currentselected == 0){
                 currentselected = idee;
                 localStorage.setItem("currentselected", idee);
-                document.getElementById(idee).style.backgroundColor = "var(--selection-color)";
+                document.getElementById(idee).style.background = "var(--selection-color)";
                 document.getElementById(idee).style.color = "white";
                 document.getElementById('win'+idee).style.zIndex = 40;    
             }else{
 
-                document.getElementById(currentselected).style.backgroundColor = color_deselected;
+                document.getElementById(currentselected).style.background = color_deselected;
                 document.getElementById(currentselected).style.color = "var(--body-color)";
                 document.getElementById('win'+currentselected).style.zIndex = 1;   
                 
                 currentselected = idee;
                 localStorage.setItem("currentselected", idee);
-                document.getElementById(idee).style.backgroundColor = "var(--selection-color)";
+                document.getElementById(idee).style.background = "var(--selection-color)";
                 document.getElementById(idee).style.color = "white";
                 document.getElementById('win'+idee).style.zIndex = 40;    
             }
@@ -60,7 +60,7 @@ function mouseDown(e){
                 console.log("no contextmenu exists")
             }
 
-            document.getElementById(currentselected).style.backgroundColor = color_deselected;
+            document.getElementById(currentselected).style.background = color_deselected;
             document.getElementById(currentselected).style.color = "var(--body-color)";
             document.getElementById('win'+currentselected).style.zIndex = 1;   
         }else{

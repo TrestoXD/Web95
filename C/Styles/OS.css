@@ -115,12 +115,12 @@ html{
 }
 
 ::selection{
-    background-color: var(--selection-color);
+    background: var(--selection-color);
     color: white;
     text-shadow: none;
 }
 ::-moz-selection{
-    background-color: var(--selection-color);
+    background: var(--selection-color);
     color: white;
     text-shadow: none;
 }
@@ -175,6 +175,16 @@ h1{
     margin: 0px;
 }
 
+.button_noborder{
+    border: none;
+    box-shadow: none;
+}
+.button_noborderdisabled{
+    border: none;
+    box-shadow: none;
+    color: var(--secbody-color);
+    text-shadow: 1px 1px 0px white;
+}
 .Startmenu{
     margin: 0;
     padding: 0;
@@ -202,6 +212,7 @@ button, select{
     border-style: solid;
     border-width: 2px;
     border-color: white black black white;
+    box-shadow: -1px -1px var(--terbody-color) inset;
 
     min-width: 20px;
     min-height: 20px;
@@ -257,6 +268,7 @@ button, select{
     border-style: solid;
     border-width: 2px;
     border-color: white black black white;
+    box-shadow: -1px -1px var(--terbody-color) inset;
 }
 .button:active{
     padding: 0px 5px 0px 5px;
@@ -266,6 +278,7 @@ button, select{
     border-style: solid;
     border-width: 2px;
     border-color: black white white black;
+
 }
 
 .input{
@@ -285,6 +298,7 @@ button, select{
     border-style: solid;
     border-width: 2px;
     border-color: white black black white;
+    box-shadow: -1px -1px var(--terbody-color) inset;
 }
 .input input{
     position: absolute;
@@ -326,6 +340,7 @@ button, select{
     border-style: solid;
     border-width: 2px;
     border-color: white black black white;    
+    box-shadow: -1px -1px var(--terbody-color) inset;
 
     width: auto;
     max-width: 200px;
@@ -360,7 +375,7 @@ button, select{
 
 #contextmenu > button:hover{
     color: white;
-    background-color: var(--selection-color);
+    background: var(--selection-color);
 
     text-shadow: none;
 }
@@ -431,6 +446,7 @@ button, select{
     border-style: solid;
     border-width: 2px;
     border-color: white black black white;
+    box-shadow: -1px -1px var(--terbody-color) inset;
 }
 
 .StartButton:active{
@@ -468,6 +484,7 @@ button, select{
     border-style: solid;
     border-width: 2px;
     border-color: white black black white;
+    box-shadow: -1px -1px var(--terbody-color) inset;
 }
 
 .taskbar-button:active{
@@ -507,7 +524,7 @@ button, select{
 }
 
 .Social button:hover{
-    background-color: var(--selection-color);
+    background: var(--selection-color);
 }
 
 .Social button:active img{
@@ -652,6 +669,7 @@ button, select{
     border-style: solid;
     border-width: 2px;
     border-color: white black black white;
+    box-shadow: -1px -1px var(--terbody-color) inset;
  
 }
 
@@ -696,7 +714,7 @@ button, select{
     padding: 0px 2px 0px 2px;
     margin-bottom: 2px;
 
-    background-color: var(--terbody-color);
+    background: var(--terbody-color);
     color: var(--body-color);
 
     line-height: 0;
@@ -777,7 +795,7 @@ button, select{
     padding: 0px 2px 0px 2px;
     margin-bottom: 2px;
 
-    background-color: var(--terbody-color);
+    background: var(--terbody-color);
     color: var(--body-color);
 
     line-height: 0;
@@ -818,6 +836,7 @@ button, select{
     border-style: solid;
     border-width: 2px;
     border-color: white black black white;
+
     
     line-height: 0px;
 
@@ -946,7 +965,7 @@ button, select{
 }
 
 #minmenu div button:hover{
-    background-color: var(--selection-color);
+    background: var(--selection-color);
     color: white;
 }
 
@@ -997,7 +1016,7 @@ button, select{
 }
 
 #secmenu button:hover{
-    background-color: var(--selection-color);
+    background: var(--selection-color);
     color: white;
 }
 
@@ -1040,10 +1059,11 @@ button, select{
     font-weight: 100;
     justify-content: center;
     align-items: center;
+    box-shadow: none;
 }
 
 .desktop_button:hover p, .desktop_button:hover .appicon{
-    background-color: var(--selection-color);
+    background: var(--selection-color);
 }
 
 .desktop_button p{

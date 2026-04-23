@@ -107,18 +107,18 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
     if(currentselected == 0){
         currentselected = top;
         localStorage.setItem("currentselected", top);
-        document.getElementById(top).style.backgroundColor = "var(--selection-color)";
+        document.getElementById(top).style.background = "var(--selection-color)";
         document.getElementById(top).style.color = "white";
         document.getElementById('win'+top).style.zIndex = 40;    
     }else{
 
-        document.getElementById(currentselected).style.backgroundColor = color_deselected;
+        document.getElementById(currentselected).style.background = color_deselected;
         document.getElementById(currentselected).style.color = "var(--body-color)";
         document.getElementById('win'+currentselected).style.zIndex = 1;   
         
         currentselected = top;
         localStorage.setItem("currentselected", top);
-        document.getElementById(top).style.backgroundColor = "var(--selection-color)";
+        document.getElementById(top).style.background = "var(--selection-color)";
         document.getElementById(top).style.color = "white";
         document.getElementById('win'+top).style.zIndex = 40;    
     }

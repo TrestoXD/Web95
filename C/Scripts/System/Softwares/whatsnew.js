@@ -10,7 +10,13 @@ function NewsEXE(){
     <img usemap="#w95widget" src="https://baccyflap.com/noai/w95widget.gif" alt="a gray Windows 95 style dialog box titled 'The No AI Webring' with a little icon showing a computer chip in a rubbish bin. beside it are three clickable buttons, labeled Previous, Random... and Next"> 
     <h1 style="margin:20px">Welcome to the news!</h1>
     <p>I've created the news! To new the new news!</p>
-<div> <!-- NEWS SECTION! -->
+<div class="whatnewnew"> <!-- NEWS SECTION! -->
+    <p> 0.0.17 </p>
+    <ul>
+        <li>New Selection color ME! Like Windows ME!</li>
+        <li>linear gradients on selection color</li>
+        <li>Scrollbar in What's New</li>
+    </ul>
     <p> 0.0.16 </p>
     <ul>
         <li>Start manager added cusomizable Taskbar</li>
