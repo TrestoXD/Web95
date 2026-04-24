@@ -1,5 +1,5 @@
-function MycomputerEXE(){
-    WindowExe('My Computer', 450, 400, 'mycomputer.ico', true, true, `
+function C_MSDOS(){
+    WindowExe('Exploring - MS-dos(C:)', 450, 400, 'Drive.ico', true, true, `
         <div class="explorer_topbar">
             <button class="disabled"><span class="underline">F</span>ile</button>
             <button class="disabled"><span class="underline">E</span>dit</button>
@@ -9,7 +9,7 @@ function MycomputerEXE(){
         <hr>
         <div class="explorer_files_topbar">
             <select style="margin-right:10px;">
-                <option>My Computer</option>
+                <option>MS-dos(C:)</option>
             </select>
 
             <button style="margin-right:10px;"> <img alt="Navegate" src="./Styles/icons/System/Navegate.ico"> </button> 
@@ -19,10 +19,7 @@ function MycomputerEXE(){
             <button> <img alt="Undo" src="./Styles/icons/System/Undo.ico"> </button>
         </div>
         <div class="explorer_files">
-            <button ondblclick='ErrorMenu("An error ocurred when trying to open the drive. Unable to load the Drive.", "Drive is unaccesible")'> <img src="./Styles/AppIcons/DriveFloppy.ico"> <p>5&frac14; Floppy (A:)</p></button>
-            <button ondblclick='ErrorMenu("Please insert the disk labeled, and then click OK.", "Insert Disk")'> <img src="./Styles/AppIcons/DriveFloppy.ico"> <p>5&frac14; Floppy (B:)</p></button>
-            <button ondblclick='C_MSDOS()'> <img src="./Styles/AppIcons/Drive.ico"> <p>MS-dos(C:)</p> </button>
-            <button ondblclick='ControlpanelEXE()'> <img src="./Styles/AppIcons/ControlsFolder.ico"> <p>Control Panel</p> </button>
+            <button ondblclick='ErrorMenu("An error ocurred when trying to open the drive. Unable to load the Drive.", "Drive is unaccesible")'> <img src="./Styles/AppIcons/DriveFloppy.ico"> <p>Program Files</p></button>
         </div>
         <div class="explorer_bottombar">
             <p>4 object(s)</p>
