@@ -11,6 +11,14 @@ function NewsEXE(){
     <h1 style="margin:20px">Welcome to the news!</h1>
     <p>I've created the news! To new the new news!</p>
 <div class="whatnewnew"> <!-- NEWS SECTION! -->
+    <p> 0.0.18 </p>
+    <ul>
+        <li>Removed image Under Build</li>
+        <li>Renamed all software document to: (name)EXE</li>
+        <li>Changed Discord Image</li>
+        <li>Changed notes color</li>
+        <li>Added margin right to the apps buttons</li>
+    </ul>
     <p> 0.0.17 </p>
     <ul>
         <li>New Selection color ME! Like Windows ME!</li>

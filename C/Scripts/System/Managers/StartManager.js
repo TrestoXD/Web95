@@ -2,6 +2,7 @@ console.log("StartManager Runing")
 
 ///// SYSTEM VARIABLES /////
 
+let underconstruction = true;
 let volume_widget = true;
 let time_widget = true;
 let socialmedia_widget = true;

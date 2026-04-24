@@ -111,7 +111,7 @@ html{
     --secbody-color: #a0a0a0;
     --terbody-color: #808080;
 
-    --notes-color: #feffdf;
+    --notes-color: #fcfc00;
 }
 
 ::selection{
@@ -249,8 +249,8 @@ button, select{
     font-smooth: none;
 
     background: var(--bakground-color);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
+    background-size: 500px;
     background-clip: content-box;
     color: white;
     -webkit-user-drag: none;
@@ -582,6 +582,14 @@ button, select{
 
     flex-direction: row;
 }
+.Apps button{
+    margin-right: 3px;
+}
+/*.Apps button{
+    background-image: radial-gradient(var(--body-color) 1px, white 1px);
+    background-size: 3px 3px;
+}
+    APPS SELECIONADAS */
 
 /* NOTIFICATIONS */
 .Notification{
@@ -594,7 +602,8 @@ button, select{
     padding: 12px;
 
     color: black;
-    background-color: var(--notes-color);
+    background-image: radial-gradient(var(--notes-color) 1px, white 1px);
+    background-size: 4px 4px;
 
     font-size: calc(14px - var(--fontsize));
 
@@ -891,7 +900,9 @@ button, select{
     border-width: 2px;
     border-color: var(--terbody-color) white  white var(--terbody-color);
 
-    background-color: var(--notes-color);
+    inset: 0;
+    background-image: radial-gradient(var(--notes-color) 1px, white 1px);
+    background-size: 4px 4px;
 }
 
 .Wsided-left{

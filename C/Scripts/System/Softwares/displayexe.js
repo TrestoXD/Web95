@@ -98,7 +98,10 @@ function displaybackgroundchange(color){
         r.style.setProperty('--bakground-color', "url('./Wallpapers/Colouds.png')");
     }else if(color == "bliss"){
         r.style.setProperty('--bakground-color', "url('./Wallpapers/bliss.png')");
-    }else{
+    }else if(color == "underconstruction"){
+        r.style.setProperty('--bakground-color', "url('./Wallpapers/underconstruction_Wallpaper.png')");
+    }
+    else{
         r.style.setProperty('--bakground-color', color); 
     }
     localStorage.setItem('settings_background', color);
