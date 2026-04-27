@@ -16,12 +16,17 @@ function NewsEXE(){
     <p>I want to add a new Blog section! cuz it's cool and in a API for making your websites is kinda Obious to have!</p>
     <hr>
 
-    <p> 0.0.19 </p>
+    <h3> 0.0.20 </h3>
+    <ul>
+        <li>OS.css changed a little bit to be better organized!</li>
+        <li>Newspaper version new style!</li>
+    </ul>
+    <h3> 0.0.19 </h3>
     <ul>
         <li>Added in the works new ExternalSoftwareManager!</li>
         <li>Fixed color in the newspapers! WOPS! My fault</li>
     </ul>
-    <p> 0.0.18 </p>
+    <h3> 0.0.18 </h3>
     <ul>
         <li>Removed image Under Build</li>
         <li>Renamed all software document to: (name)EXE</li>
@@ -29,33 +34,33 @@ function NewsEXE(){
         <li>Changed notes color</li>
         <li>Added margin right to the apps buttons</li>
     </ul>
-    <p> 0.0.17 </p>
+    <h3> 0.0.17 </h3>
     <ul>
         <li>New Selection color ME! Like Windows ME!</li>
         <li>linear gradients on selection color</li>
         <li>Scrollbar in What's New</li>
     </ul>
-    <p> 0.0.16 </p>
+    <h3> 0.0.16 </h3>
     <ul>
         <li>Start manager added cusomizable Taskbar</li>
         <li>Control panel adjusted height</li>
         <li>My Computer accesible control pannel</li>
     </ul>
-    <p> 0.0.15 </p>
+    <h3> 0.0.15 </h3>
     <ul>
         <li>Main menu icons fixed</li>
         <li>sound menu in the works</li>
         <li>Control panel added! and display settings moved into the control pannel</li>
     </ul>
-    <p> 0.0.13 & 0.0.14 </p>
+    <h3> 0.0.13 & 0.0.14 </h3>
     <ul>
         <li>Trying to fix the buttons images on the main menu</li>
     </ul>
-    <p> 0.0.12 </p>
+    <h3> 0.0.12 </h3>
     <ul>
         <li>I didn't add the version title correctly on the news! My fault!</li>
     </ul>
-    <p> 0.0.11 </p> 
+    <h3> 0.0.11 </h3> 
     <ul>
         <li>Fixed Some icons from the main menu (I think, maybe in some browsers, HA HA HA HA HA!)</li>
         <li>Deleted some unused button apps in the main menu</li>

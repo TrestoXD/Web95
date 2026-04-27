@@ -1,9 +1,37 @@
 /* 
-    Este es el css para todo el "sistema operativo" a partir de la boot screen 
+    This is the whole CSS for the "operating sistem" 
 
-    version 0.4
-
+    version 1.0
 */
+
+/* 
+    V A R I A B L E S 
+*/
+:root{
+    --fontsize: 0px ;
+
+    --text-color: black;
+
+    --bakground-color: #008080;
+    --selection-color: #000080;
+    --body-color: #c3c3c3;
+    --secbody-color: #a0a0a0;
+    --terbody-color: #808080;
+
+    --notes-color: #fcfc00;
+}
+
+/*
+    I N I T I A L   C O N F I G
+*/
+*{
+    image-rendering: pixelated;
+
+    font-family: F95;
+    font-smooth: none;
+
+    font-size: calc(14px - var(--fontsize));
+}
 
 html{
     margin: 0;
@@ -42,18 +70,6 @@ html{
     border-width: 2px;
     outline: var(--body-color) 2px;
 }
-
-/*::-webkit-scrollbar-button{
-    background: #c0c0c0;
-    color: black;
-
-    border-style: solid;
-    border-width: 1px;
-    border-color: white black black white;
-
-    width: 20px;
-    height: 20px;
-}*/
 ::-webkit-scrollbar-button:single-button:vertical:decrement{
     background-image: url("./icons/System/button-arrow-up.svg");
     background-size: cover;
@@ -100,20 +116,6 @@ html{
     outline: var(--body-color) 2px;
 }
 
-:root{
-    --fontsize: 0px ;
-
-    --text-color: black;
-
-    --bakground-color: #008080;
-    --selection-color: #000080;
-    --body-color: #c3c3c3;
-    --secbody-color: #a0a0a0;
-    --terbody-color: #808080;
-
-    --notes-color: #fcfc00;
-}
-
 ::selection{
     background: var(--selection-color);
     color: white;
@@ -125,17 +127,13 @@ html{
     text-shadow: none;
 }
 
-*{
-    image-rendering: pixelated;
 
-    font-family: F95;
-    font-smooth: none;
 
-    font-size: calc(14px - var(--fontsize));
-}
+/*
+    S T A R T   M E N U 
+*/
 
-/* START MENU */
-
+/* BAR ANIMATION */
 @keyframes moving{
     0%{
         background-position: 0% 0%;
@@ -150,41 +148,6 @@ html{
     }
 }
 
-@font-face {
-    font-family: F95;
-    src: url(./Fonts/MSSansSerif8pt.ttf);
-}
-
-@font-face {
-    font-family: TimesNew95;
-    src: url(./Fonts/pixelated-times-new-roman.otf);
-}
-
-@font-face {
-    font-family: Marlet;
-    src: url(./Fonts/Marlet.ttf);
-}
-
-h1{
-    font-family: TimesNew95;
-    font-weight: 100;
-    font-size: calc(60px - var(--fontsize));
-
-    line-height: 0px;
-    padding: 0px;
-    margin: 0px;
-}
-
-.button_noborder{
-    border: none;
-    box-shadow: none;
-}
-.button_noborderdisabled{
-    border: none;
-    box-shadow: none;
-    color: var(--secbody-color);
-    text-shadow: 1px 1px 0px white;
-}
 .Startmenu{
     margin: 0;
     padding: 0;
@@ -196,26 +159,6 @@ h1{
 
     align-items: center;
     justify-content: center;
-}
-
-body{
-    margin: 0;
-    padding: 0;
-
-    overflow: hidden;
-}
-button, select{
-    
-
-    background-color: var(--body-color);
-
-    border-style: solid;
-    border-width: 2px;
-    border-color: white black black white;
-    box-shadow: -1px -1px var(--terbody-color) inset;
-
-    min-width: 20px;
-    min-height: 20px;
 }
 
 .loading-bar{
@@ -239,7 +182,72 @@ button, select{
     bottom: 0;
 }
 
-/* Desktop */
+
+
+/* 
+    S Y S T E M   F O N T S
+*/
+
+/* DEFAULT BASIC TEXT FONT */
+@font-face {
+    font-family: F95;
+    src: url(./Fonts/MSSansSerif8pt.ttf);
+}
+
+/* DEFAULT TITLES TEXT FONT */
+@font-face {
+    font-family: TimesNew95;
+    src: url(./Fonts/pixelated-times-new-roman.otf);
+}
+
+/* DEFAULT TRMINAL TEXT FONT */
+@font-face {
+    font-family: Marlet;
+    src: url(./Fonts/Marlet.ttf);
+}
+
+
+
+/*
+    B A S I C   C S S   S T Y L E
+*/
+
+h1{
+    font-family: TimesNew95;
+    font-weight: 100;
+    font-size: calc(60px - var(--fontsize));
+
+    line-height: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+button, select{
+    
+
+    background-color: var(--body-color);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;
+    box-shadow: -1px -1px var(--terbody-color) inset;
+
+    min-width: 20px;
+    min-height: 20px;
+}
+
+
+
+/* 
+    D E S K T O P 
+*/
 
 .Desktop{
     width: 100%;
@@ -260,6 +268,60 @@ button, select{
     -webkit-user-drag: none;
 }
 
+.overlay{
+    height: 100%;
+    padding: 4px;
+}
+
+.desktop_button{
+    display: block;
+
+    width: 90px;
+    height: 80px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+
+    background-color: transparent;
+
+    color: white;
+    font-weight: 100;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+}
+
+.desktop_button:hover p, .desktop_button:hover .appicon{
+    background: var(--selection-color);
+}
+
+.desktop_button p{
+    text-wrap: wrap;
+    word-wrap: break-word;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 4px;
+    margin: 0;
+}
+
+.appicon{
+    width: 40px;
+}
+
+.appdecor{
+    position: absolute;
+
+    transform: translate(-40px, 8px);
+}
+
+
+
+/*
+    B U T T O N S
+*/
+
 .button{
     padding: 0px 5px 0px 5px;
     margin: 0px;
@@ -270,6 +332,19 @@ button, select{
     border-color: white black black white;
     box-shadow: -1px -1px var(--terbody-color) inset;
 }
+
+.button_noborder{
+    border: none;
+    box-shadow: none;
+}
+
+.button_noborderdisabled{
+    border: none;
+    box-shadow: none;
+    color: var(--secbody-color);
+    text-shadow: 1px 1px 0px white;
+}
+
 .button:active{
     padding: 0px 5px 0px 5px;
     margin: 0px;
@@ -278,7 +353,6 @@ button, select{
     border-style: solid;
     border-width: 2px;
     border-color: black white white black;
-
 }
 
 .input{
@@ -300,6 +374,7 @@ button, select{
     border-color: white black black white;
     box-shadow: -1px -1px var(--terbody-color) inset;
 }
+
 .input input{
     position: absolute;
     opacity: 0;
@@ -326,6 +401,11 @@ button, select{
     filter: brightness(0);
 }
 
+
+
+/*
+    C O N T E X T   M E N U
+*/
 #contextmenu{
     position:absolute;
     z-index: 999999999999999;
@@ -379,6 +459,7 @@ button, select{
 
     text-shadow: none;
 }
+
 #contextmenu > button:hover > img{
     filter: invert();
 }
@@ -394,7 +475,11 @@ button, select{
     text-shadow: 1px 1px 0px white;
 }
 
-/* Barra de tareas */
+
+
+/* 
+    T A S K B A R 
+*/
 
 .Taskbar{
     width: 100%;
@@ -430,44 +515,6 @@ button, select{
     border-style: solid;
     border-width: 2px;
     border-color: var(--terbody-color) white white var(--terbody-color);
-}
-
-.StartButton{
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    padding: 0px 4px 0px 4px;
-    margin: 0px;
-    gap: 2px;
-
-    background-color: var(--body-color);
-    border-style: solid;
-    border-width: 2px;
-    border-color: white black black white;
-    box-shadow: -1px -1px var(--terbody-color) inset;
-}
-
-.StartButton:active{
-    background-color: var(--secbody-color);
-    border-color: black white white black;
-}
-
-.StartButton img{
-    width: 20px;
-    height: 20px;
-}
-
-.StartButton p {
-    text-align: center;
-    vertical-align: middle;
-
-    font-weight: 700;
-    margin: 0;
-    font-size: calc(14px - var(--fontsize));
-
-    line-height: 0px;
 }
 
 .taskbar-button{
@@ -507,6 +554,52 @@ button, select{
     height: 20px;
 }
 
+/*
+    T A S K B A R  -  S T A R T   B U T T O N
+*/
+
+.StartButton{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px 4px 0px 4px;
+    margin: 0px;
+    gap: 2px;
+
+    background-color: var(--body-color);
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;
+    box-shadow: -1px -1px var(--terbody-color) inset;
+}
+
+.StartButton:active{
+    background-color: var(--secbody-color);
+    border-color: black white white black;
+}
+
+.StartButton img{
+    width: 20px;
+    height: 20px;
+}
+
+.StartButton p {
+    text-align: center;
+    vertical-align: middle;
+
+    font-weight: 700;
+    margin: 0;
+    font-size: calc(14px - var(--fontsize));
+
+    line-height: 0px;
+}
+
+/* 
+    T A S K B A R  -  S O C I A L
+*/
+
 .Social{
     display: flex;
     right: 0;
@@ -538,6 +631,12 @@ button, select{
     width: 24px;
     height: 23px;
 }
+
+
+
+/* 
+    T A S K B A R  -  W I D G E T S 
+*/
 
 .Widgets{
     display: flex;
@@ -591,7 +690,11 @@ button, select{
 }
     APPS SELECIONADAS */
 
-/* NOTIFICATIONS */
+
+
+/* 
+    N O T I F I C A T I O N S 
+*/
 .Notification{
     display: flex;
     flex-direction: column;
@@ -613,7 +716,6 @@ button, select{
     border-radius: 15px;
 }
 
-
 .Notification button{
     position: absolute;
 
@@ -630,12 +732,15 @@ button, select{
     border-width: 2px;
     border-color: var(--secbody-color);
 }
+
 .Notification button:active{
     background-color: #d4d6b2;
 }
+
 .Notification div{
     display: flex;
 }
+
 .Notification img{
     width: 20px;
     height: 20px;
@@ -644,6 +749,7 @@ button, select{
     padding-right: 8px;
     padding-bottom: 4px;
 }
+
 .Notification h4{
     margin: 0;
     padding: 0;
@@ -651,9 +757,11 @@ button, select{
     vertical-align: middle;
     padding-top: 4px;
 }
+
 .Notification p{
     margin: 0;
 }
+
 .Notification button img{
     width: 12px;
     height: 30px;
@@ -663,7 +771,9 @@ button, select{
 
 }
 
-/* Windows */
+/* 
+    W I N D O W S 
+*/
 
 .Window{
     position:absolute;
@@ -682,7 +792,9 @@ button, select{
  
 }
 
-/* PREVIEW WTOP-BAR */
+/* 
+    P R E V I E W   W T O P  -  B A R 
+*/
 
 .preview{
     background: var(--bakground-color);
@@ -790,7 +902,9 @@ button, select{
     -webkit-user-drag:none;
 }
 
-/*TOP BAR*/
+/*
+    W I N D O W  -  T O P   B A R
+*/
 .WTop-Bar{
     user-select: none;
     display: flex;
@@ -925,8 +1039,10 @@ button, select{
 }
 
 
-/*Start Menu*/
 
+/* 
+    M A I N   M E N U
+*/
 
 #minmenu{
     position:absolute;
@@ -1011,6 +1127,7 @@ button, select{
     max-width: 200px;
     width: 200px;
 }
+
 #secmenu button{
     border: none;
     background-color: transparent;
@@ -1044,54 +1161,4 @@ button, select{
     width: 20px;
     position: absolute;
     right: 0;
-}
-
-/* DESKTOP */
-
-.overlay{
-    height: 100%;
-    padding: 4px;
-}
-
-.desktop_button{
-    display: block;
-
-    width: 90px;
-    height: 80px;
-
-    padding: 0;
-    margin: 0;
-
-    border: none;
-
-    background-color: transparent;
-
-    color: white;
-    font-weight: 100;
-    justify-content: center;
-    align-items: center;
-    box-shadow: none;
-}
-
-.desktop_button:hover p, .desktop_button:hover .appicon{
-    background: var(--selection-color);
-}
-
-.desktop_button p{
-    text-wrap: wrap;
-    word-wrap: break-word;
-    padding-left: 2px;
-    padding-right: 2px;
-    padding-top: 4px;
-    margin: 0;
-}
-
-.appicon{
-    width: 40px;
-}
-
-.appdecor{
-    position: absolute;
-
-    transform: translate(-40px, 8px);
 }

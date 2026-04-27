@@ -480,10 +480,21 @@ hr{
     overflow-y: auto;
 
     height: calc(100% - 130px);
+
 }
 .whatnewnew hr{
     margin: 2px;
     border-width: 2px;
     border-color: var(--terbody-color) white white var(--terbody-color);
     border-style: solid;
+}
+.whatnewnew h3 {
+    padding: 6px;
+    background-color:crimson;
+
+    border-width: 2px;
+    border-color: black white white black;
+    border-style: solid;
+    width: min-content;
+    text-wrap: nowrap;
 }
