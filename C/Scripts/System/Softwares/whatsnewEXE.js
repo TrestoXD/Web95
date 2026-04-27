@@ -11,6 +11,16 @@ function NewsEXE(){
     <h1 style="margin:20px">Welcome to the news!</h1>
     <p>I've created the news! To new the new news!</p>
 <div class="whatnewnew"> <!-- NEWS SECTION! -->
+
+    <h2>For the future!</h2>
+    <p>I want to add a new Blog section! cuz it's cool and in a API for making your websites is kinda Obious to have!</p>
+    <hr>
+
+    <p> 0.0.19 </p>
+    <ul>
+        <li>Added in the works new ExternalSoftwareManager!</li>
+        <li>Fixed color in the newspapers! WOPS! My fault</li>
+    </ul>
     <p> 0.0.18 </p>
     <ul>
         <li>Removed image Under Build</li>

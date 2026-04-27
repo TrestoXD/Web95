@@ -143,7 +143,8 @@ hr{
 
     box-sizing: border-box;
 
-    background-color: var(--notes-color);
+    background-image: radial-gradient(var(--notes-color) 1px, white 1px);
+    background-size: 4px 4px;
 
     border-color: black white white black;
     border-style: solid;
@@ -479,4 +480,10 @@ hr{
     overflow-y: auto;
 
     height: calc(100% - 130px);
+}
+.whatnewnew hr{
+    margin: 2px;
+    border-width: 2px;
+    border-color: var(--terbody-color) white white var(--terbody-color);
+    border-style: solid;
 }
