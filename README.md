@@ -4,7 +4,7 @@ Web 95 is an "API" for making your own Windows 95 Like Website! This repository 
 
 Live Demo: https://trestoxd.github.io/Web95/
 
-<img width="1190" height="893" alt="imagen" src="https://github.com/user-attachments/assets/5bd70b03-17fd-44a1-ab31-94ee84525979" />
+<img width="1387" height="945" alt="Captura de pantalla 2026-04-28 094507" src="https://github.com/user-attachments/assets/1fb00799-59e7-470d-8c8c-ffb6da970cda" />
 
 ## How to use it?
 If used, please credit! 
