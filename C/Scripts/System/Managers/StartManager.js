@@ -107,6 +107,6 @@ function settingsLoader(){
 
 function popupLoader(){
     // You can change the style of your System in Settings -> Display Properties
-
+    
     
 }

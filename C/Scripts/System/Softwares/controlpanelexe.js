@@ -8,7 +8,10 @@ function ControlpanelEXE(){
             <button class="disabled"><span class="underline">H</span>elp</button>
     </div>
     <div class="explorer_files" style="height: calc(100% - 58px);">
-        <button onclick=displayEXE()> <img alt="Navegate" src="./Styles/appicons/display.ico"> <p>Display</p></button>
+        <button onclick=displayEXE()> <img alt="Display" src="./Styles/appicons/display.ico"> <p>Display</p></button>
+        <button onclick=displayEXE()> <img alt="Sound" src="./Styles/appicons/systemsound.ico"> <p>Sound</p></button>
+        <button onclick=displayEXE()> <img alt="Mouse" src="./Styles/appicons/mouse.ico"> <p>Mouse</p></button>
+        <button onclick=displayEXE()> <img alt="System" src="./Styles/appicons/system.ico"> <p>System</p></button>
     </div>
     `)
 }
