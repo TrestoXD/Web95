@@ -322,6 +322,18 @@ button, select{
     B U T T O N S
 */
 
+button:active{
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--terbody-color); 
+    box-shadow: none;
+}
+button:focus {
+    outline: 2px dotted black;
+    outline-offset: -6px;
+    box-shadow: -1px -1px var(--terbody-color) inset, 0px 0px 0px 2px black;
+}
+
 .button{
     padding: 0px 5px 0px 5px;
     margin: 0px;
@@ -337,6 +349,11 @@ button, select{
     border: none;
     box-shadow: none;
 }
+.button_noborder:focus{
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
 
 .button_noborderdisabled{
     border: none;
@@ -344,15 +361,16 @@ button, select{
     color: var(--secbody-color);
     text-shadow: 1px 1px 0px white;
 }
+.button_noborderdisabled:focus{
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
 
-.button:active{
-    padding: 0px 5px 0px 5px;
-    margin: 0px;
-    
-    background-color: var(--secbody-color);
-    border-style: solid;
-    border-width: 2px;
-    border-color: black white white black;
+.desktop_button:focus{
+    outline: none;
+    border: none;
+    box-shadow: none;
 }
 
 .input{
@@ -967,13 +985,19 @@ button, select{
 }
 
 .WTop-Bar div button:active{
-    background-color: var(--secbody-color);
-
+    outline: none;
     border-style: solid;
     border-width: 2px;
     border-color: black white white black;
+    box-shadow: 1px 1px var(--terbody-color) inset;
     
     line-height: 0px;
+}
+.WTop-Bar div button:focus{
+    outline: none;
+}
+.WTop-Bar div button:active img{
+    transform: translate(calc(-50% + 1px), calc(-50% + 1px));
 }
 
 .WTop-Bar div button img{
@@ -983,10 +1007,11 @@ button, select{
 
     line-height: 0px;
 
-    transform: translate(-50%, -50%);
+    transform: translate(calc(-50%), calc(-50%));
     width: 11px;
 
     -webkit-user-drag:none;
+    pointer-events: none;
 }
 
 .WTop-Bar-detectable{

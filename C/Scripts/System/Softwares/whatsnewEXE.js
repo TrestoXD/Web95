@@ -16,6 +16,11 @@ function NewsEXE(){
     <p>I want to add a new Blog section! cuz it's cool and in a API for making your websites is kinda Obious to have!</p>
     <hr>
 
+    <h3> 0.0.22 </h3>
+    <ul>
+        <li>Buttons new hover!</li>
+        <li>Controlpanel now works correctly on double click and not in basic click!</li>
+    </ul>
     <h3> 0.0.21 </h3>
     <ul>
         <li>External Software Manager Added with icons on desktop handling!</li>
