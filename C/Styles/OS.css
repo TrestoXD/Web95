@@ -321,6 +321,16 @@ button, select{
 /*
     B U T T O N S
 */
+button{
+    padding: 0px 5px 0px 5px;
+    margin: 0px;
+    
+    background-color: var(--body-color);
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;
+    box-shadow: -1px -1px var(--terbody-color) inset;
+}
 
 button:active{
     border-style: solid;
@@ -332,17 +342,6 @@ button:focus {
     outline: 2px dotted black;
     outline-offset: -6px;
     box-shadow: -1px -1px var(--terbody-color) inset, 0px 0px 0px 2px black;
-}
-
-.button{
-    padding: 0px 5px 0px 5px;
-    margin: 0px;
-    
-    background-color: var(--body-color);
-    border-style: solid;
-    border-width: 2px;
-    border-color: white black black white;
-    box-shadow: -1px -1px var(--terbody-color) inset;
 }
 
 .button_noborder{

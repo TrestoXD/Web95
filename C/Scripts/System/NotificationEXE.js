@@ -15,7 +15,7 @@ function NotificationExe(title, content){
     <div>
         <img src=${icon}> 
         <h4>${title}</h4>
-        <button onclick="closenotif()"> <img src="./Styles/icons/close.svg" alt="r"> </button>
+        <button onclick="closenotif()" class="button_noborder"> <img src="./Styles/icons/close.svg" alt="r"> </button>
     </div>
     <div> 
         <p> ${content} </p>
