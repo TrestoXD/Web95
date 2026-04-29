@@ -798,6 +798,7 @@ button:focus {
 
     font-size: calc(14px - var(--fontsize));
     padding: 2px;
+    padding-right: 3px;
 
     color: black;
     background-color: var(--body-color);
@@ -806,7 +807,23 @@ button:focus {
     border-width: 2px;
     border-color: white black black white;
     box-shadow: -1px -1px var(--terbody-color) inset;
- 
+
+    display: flex;
+    flex-direction: column;
+}
+.WInterior{
+    padding: 4px;
+
+    background-color: white;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: black white white black;
+    box-shadow: -1px -1px var(--body-color) inset;
+
+    height: calc(100% - 27px);
+
+    box-sizing: border-box;
 }
 
 /* 
@@ -884,8 +901,8 @@ button:focus {
 }
 
 .Preview-WTop-Bar div button{
-    height: 20px;
-    width: 20px;
+    height: 21px;
+    width: 21px;
 
     background-color: var(--body-color);
 
@@ -914,7 +931,7 @@ button:focus {
     line-height: 0px;
 
     transform: translate(-50%, -50%);
-    width: 11px;
+    width: 12px;
 
     -webkit-user-drag:none;
 }
@@ -932,7 +949,7 @@ button:focus {
     height: 24px;
 
     align-items: center;
-    padding: 0px 2px 0px 2px;
+    padding: 1px 3px 1px 3px;
     margin-bottom: 2px;
 
     background: var(--terbody-color);
@@ -956,20 +973,16 @@ button:focus {
 }
 
 .WTop-Bar div img{
-    transform: translateX(-1px)translateY(3px);
+    transform: translateX(-2px)translateY(4px);
 
     width: 20px;
     height: 20px;
-}
 
-.WTop-Bar div button img{
-    left: auto;
-    top: auto;
+    margin-right: 2px;
 }
-
 .WTop-Bar div button{
-    height: 20px;
-    width: 20px;
+    height: 19px;
+    width: 21px;
 
     background-color: var(--body-color);
 
@@ -1007,7 +1020,7 @@ button:focus {
     line-height: 0px;
 
     transform: translate(calc(-50%), calc(-50%));
-    width: 11px;
+    width: 12px;
 
     -webkit-user-drag:none;
     pointer-events: none;

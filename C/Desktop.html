@@ -12,7 +12,7 @@
 <body class="Desktop" id="Desktop">
 
     <div id="Overlay" class="overlay">
-        <button ondblclick="PapeleraExe()" class="desktop_button"><img class="appicon" src="./Styles/AppIcons/emptyreciclebin.ico"> <p>Recycle bin</p></button>
+        <button ondblclick="new explorer().BuildWindow();" class="desktop_button"><img class="appicon" src="./Styles/AppIcons/emptyreciclebin.ico"> <p>Recycle bin</p></button>
         <button ondblclick="MycomputerEXE()" class="desktop_button"><img class="appicon" src="./Styles/AppIcons/mycomputer.ico"> <p>My Computer</p> </button>
         <button ondblclick="WellcomeExe()" class="desktop_button"><img class="appicon" src="./Styles/icons/System/windowslogo.ico"> <img src="./Styles/icons/System/Shortcut.ico" alt="" class="appdecor"> <p>Welcome.bat</p></button>
     </div>
@@ -41,6 +41,7 @@
     <script src="./Scripts/System/NotificationEXE.js"></script>
     <script src="./Scripts/System/Managers/StartManager.js"></script>
     <script src="./Scripts/External/Manager/ExternalsoftwareManager.js"></script>
+    <script src="./Scripts/System/Softwares/explorerexe.js"></script>
 
     <!-- INITAL SYSTEM PROCESS -->
     <script src="./Scripts/System/Time.js"></script>
