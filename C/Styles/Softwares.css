@@ -15,6 +15,32 @@
 
 /* NOTEPAD */
 
+/* ERROR WINDOW */
+.window_error{
+    display: flex;
+
+    align-items: center;
+    justify-content: left;
+    height: fit-content;
+    
+}
+.window_error > img{
+    padding: 16px;
+    width: 32px;
+    height: 32px;
+
+    filter: drop-shadow(2px 2px 0px var(--terbody-color));
+}
+.window_error_button{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.window_error_button > button{
+    padding: 3px;
+    min-width: 80px;
+}
+
 .underline{
     text-decoration: underline;
 }

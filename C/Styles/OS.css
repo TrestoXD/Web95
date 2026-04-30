@@ -498,6 +498,10 @@ button:focus {
     color: var(--secbody-color);
     text-shadow: 1px 1px 0px white;
 }
+.disabled > img {
+    transform: translate(1px, 1px);
+    filter:invert(1) brightness(0.5) drop-shadow(1px 1px 0px white);
+}
 
 
 
@@ -837,7 +841,7 @@ button:focus {
 /* 
     P R E V I E W   W T O P  -  B A R 
 */
-
+/*
 .preview{
     background: var(--bakground-color);
 
@@ -894,6 +898,7 @@ button:focus {
     left: 6px;
     top: 2px;
     text-align: left;
+    font-weight:bolder;
 }
 
 .Preview-WTop-Bar div img{
@@ -943,7 +948,7 @@ button:focus {
 
     -webkit-user-drag:none;
 }
-
+*/
 /*
     W I N D O W  -  T O P   B A R
 */
@@ -966,7 +971,7 @@ button:focus {
     line-height: 0;
 }
 
-.WTop-Bar div{
+.WTop-Bar > div{
     display: flex;
     flex-direction: row;
     align-self: center;
@@ -974,13 +979,14 @@ button:focus {
     padding-left: 2px;
 }
 
-.WTop-Bar div p{
+.WTop-Bar > div > p{
     left: 6px;
     top: 2px;
     text-align: left;
+    font-weight:bolder;
 }
 
-.WTop-Bar div img{
+.WTop-Bar > div > img{
     transform: translateX(-2px)translateY(4px);
 
     width: 20px;
@@ -988,7 +994,7 @@ button:focus {
 
     margin-right: 2px;
 }
-.WTop-Bar div button{
+.WTop-Bar > div > button{
     height: 19px;
     width: 21px;
 
@@ -1027,7 +1033,7 @@ button:focus {
 
     line-height: 0px;
 
-    transform: translate(calc(-50%), calc(-50%));
+    transform: translate(calc(-55%), calc(-55%));
     width: 12px;
 
     -webkit-user-drag:none;
@@ -1038,7 +1044,7 @@ button:focus {
     display: flex;
 }
 .WTop-Bar > div > button > img[alt="0"]{
-    transform: translate(-60%, -30%) scale(0.7);
+    transform: translate(-60%, 20%) scale(0.8);
 }
 .WTop-Bar > div > button:nth-child(3){
     margin-left: 2px
