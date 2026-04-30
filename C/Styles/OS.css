@@ -436,17 +436,19 @@ button:focus {
 
     border-style: solid;
     border-width: 2px;
-    border-color: white black black white;    
-    box-shadow: -1px -1px var(--terbody-color) inset;
+    border-color: var(--body-color) black black var(--body-color);    
+    box-shadow: -1px -1px var(--terbody-color) inset, 1px 1px white inset;
 
     width: auto;
     max-width: 200px;
+    box-sizing: border-box;
 }
 
 #contextmenu > button{
     width: 100%;
 
     border: none;
+    box-shadow: none;
     
     padding-top: 4px;
     padding-left: 15px;
@@ -461,6 +463,7 @@ button:focus {
     justify-content: center;
     align-items: center;
     vertical-align: middle;
+    box-sizing: border-box;
 }
 
 #contextmenu > button > img{
@@ -475,6 +478,10 @@ button:focus {
     background: var(--selection-color);
 
     text-shadow: none;
+}
+
+#contextmenu > button:focus{
+    outline: none;
 }
 
 #contextmenu > button:hover > img{
@@ -805,8 +812,8 @@ button:focus {
 
     border-style: solid;
     border-width: 2px;
-    border-color: white black black white;
-    box-shadow: -1px -1px var(--terbody-color) inset;
+    border-color: var(--body-color) black black var(--body-color);
+    box-shadow: -1px -1px var(--terbody-color) inset, 1px 1px white inset;
 
     display: flex;
     flex-direction: column;
@@ -819,9 +826,10 @@ button:focus {
     border-style: solid;
     border-width: 2px;
     border-color: black white white black;
-    box-shadow: -1px -1px var(--body-color) inset;
+    box-shadow: -1px -1px var(--terbody-color) inset, 1px 1px white inset;
 
-    height: calc(100% - 27px);
+    height: 100%;
+    margin-bottom: 1px;
 
     box-sizing: border-box;
 }
@@ -840,7 +848,7 @@ button:focus {
     border-width: 2px;
     border-color: black white white black;
     margin-bottom: 10px;
-    box-shadow: -2px -2px var(--body-color) inset;
+    box-shadow: -1px -1px var(--terbody-color) inset, 1px 1px white inset;
     z-index: 1;
 }
 
@@ -996,7 +1004,7 @@ button:focus {
     box-shadow: -1px -1px var(--terbody-color) inset;
 }
 
-.WTop-Bar div button:active{
+.WTop-Bar > div > button:active{
     outline: none;
     border-style: solid;
     border-width: 2px;
@@ -1005,14 +1013,14 @@ button:focus {
     
     line-height: 0px;
 }
-.WTop-Bar div button:focus{
+.WTop-Bar > div > button:focus{
     outline: none;
 }
-.WTop-Bar div button:active img{
+.WTop-Bar > div > button:active > img{
     transform: translate(calc(-50% + 1px), calc(-50% + 1px));
 }
 
-.WTop-Bar div button img{
+.WTop-Bar > div > button > img{
     position: absolute;
     padding: 0px;
     margin: 0px;
@@ -1028,6 +1036,12 @@ button:focus {
 
 .WTop-Bar-detectable{
     display: flex;
+}
+.WTop-Bar > div > button > img[alt="0"]{
+    transform: translate(-60%, -30%) scale(0.7);
+}
+.WTop-Bar > div > button:nth-child(3){
+    margin-left: 2px
 }
 
 .WContent{

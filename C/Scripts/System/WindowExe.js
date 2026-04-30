@@ -5,20 +5,20 @@ function WindowExe(title, width, height, img ,maximizable, ontop, content){
         mainmenuRemove();
         //document.getElementById("secmenu").outerHTML = ''   
     } catch (error) {
-        console.log("no contextmenu exists")
+        //console.log("no contextmenu exists")
     }
 
     //TotalWindows
     localStorage.setItem("totalsoft", parseInt(localStorage.getItem('totalsoft'))+1)
-    console.log("LocalStorage-windowexe:",localStorage.getItem("totalsoft"));
+    console.log("The LocalStorage-windowexe:",localStorage.getItem("totalsoft"));
 
     //Window
     const mainDiv = document.createElement("win" + localStorage.getItem("totalsoft"));
     let ide = "win" + localStorage.getItem("totalsoft");
     let top = localStorage.getItem("totalsoft");
-    console.log("el id es " + ide)
+    //console.log("el id es " + ide)
     let maxbt = ('max' + top)
-    console.log("el id del boton es:" + maxbt)
+    //console.log("el id del boton es:" + maxbt)
     let btide = ('bt' + top)
 
     mainDiv.classList.add("Window")

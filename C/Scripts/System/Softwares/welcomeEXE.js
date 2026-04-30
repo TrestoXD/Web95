@@ -3,10 +3,10 @@ var windowmanager = localStorage.getItem('windowmanager')
 
 window.onload = function(){
     localStorage.setItem("totalsoft", 0)
-    console.log("LocalStorage:",localStorage.getItem("totalsoft"));
+    console.log("The total software is:",localStorage.getItem("totalsoft"));
 
     if(debug == true || localStorage.getItem('visited', false)){
-        console.log("first Time")
+        console.log("this is the first time using the os!")
         
         WellcomeExe();
         localStorage.setItem('visited', true);
@@ -72,13 +72,13 @@ function RandomFact(){
 
     generatedFact = Facts[generatedNum];
 
-    console.log(generatedNum)
-    console.log(generatedFact)
+    //console.log(generatedNum)
+    //console.log(generatedFact)
 
     document.getElementById("welcomefact").innerText = generatedFact;
 }
 
-console.log(windowmanager)
+//console.log(windowmanager)
 
 function AddWindowManager(){
     if(windowmanager == null || windowmanager >= 0){

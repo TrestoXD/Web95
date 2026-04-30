@@ -17,12 +17,12 @@ let currentselected = 0;
 localStorage.setItem("currentselected", '0');
 
 function mouseDown(e){
-        console.log("Mousedown")
+        //console.log("Mousedown")
         
         var Clicksound = new Audio(Clicksound_data);
         Clicksound.play();
         if(e.target.id == "minmenu" | e.target.id == "minmenus" | e.target.id == "secmenu") {
-            console.log("en context")
+            //console.log("en context")
         
         }else if(e.target.classList.contains("WTop-Bar") || e.target.classList.contains("WTop-Bar-detectable")){
             idee = e.target.id 
@@ -49,29 +49,29 @@ function mouseDown(e){
 
             
         }else if(e.target.classList.contains("taskbar-button")){
-            console.log("en boton de la barra de tareas")
+            //console.log("en boton de la barra de tareas")
             deminimizeWindow(e.target.id.replace("btt", ""))
         }else if(e.target.classList.contains("overlay")){
-            console.log(e.target)
+            //console.log(e.target)
             try {
                 mainmenuRemove();
                 //document.getElementById("secmenu").outerHTML = ''   
             } catch (error) {
-                console.log("no contextmenu exists")
+                //console.log("no contextmenu exists")
             }
 
             document.getElementById(currentselected).style.background = color_deselected;
             document.getElementById(currentselected).style.color = "var(--body-color)";
             document.getElementById('win'+currentselected).style.zIndex = 1;   
         }else{
-            console.log(e.target.id)
+            //console.log(e.target.id)
         }
 }
 
 function mouseDownHeader(e){
-    console.log("El id és: "+ idee)
+    //console.log("El id és: "+ idee)
     currentclick = e.target.id;
-    console.log('elcurrentclick es: ' + currentclick)
+    //console.log('elcurrentclick es: ' + currentclick)
     Windows = document.getElementById('win' + idee)
 
     e.preventDefault();
@@ -79,8 +79,8 @@ function mouseDownHeader(e){
     startX = e.clientX - Windows.getBoundingClientRect().left;
     startY = e.clientY - Windows.getBoundingClientRect().top;
 
-    console.log("StartX", startX);
-    console.log("StartY", startY);
+    //console.log("StartX", startX);
+    //console.log("StartY", startY);
     
     document.addEventListener('mousemove', mouseMove);
 }
@@ -122,7 +122,7 @@ function maximizeWindow(ides){
     document.getElementById('win'+ ides).style.top = '0px';
     document.getElementById('win'+ ides).style.left = '0px';   
 
-    console.log(`el id del boton es: ${this.id}`)
+    //console.log(`el id del boton es: ${this.id}`)
 
     document.getElementById('max'+ ides).src = './Styles/icons/restore.svg'
     document.getElementById('bt'+ ides).setAttribute("onClick", "restoreWindow("+ides+");")
@@ -139,7 +139,7 @@ function restoreWindow(ides){
 
 function deminimizeWindow(ides){
     //desminimiza la ventana al hacer click en el botón de la barra de tareas
-    console.log("Deminimizar ventana " + ides)
+    //console.log("Deminimizar ventana " + ides)
     document.getElementById('win'+ ides).style.visibility = 'visible';
 }
 
