@@ -109,6 +109,7 @@ let olx = 100;
 let oly = 100;
 let olposx = 0;
 let olposy = 0;
+
 function maximizeWindow(ides){
     //guarda variables
     olx = document.getElementById('win'+ ides).style.width;

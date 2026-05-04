@@ -498,6 +498,10 @@ button:focus {
     color: var(--secbody-color);
     text-shadow: 1px 1px 0px white;
 }
+.disabled:active{
+    border-color: white black black white;
+    box-shadow: -1px -1px var(--terbody-color) inset;
+}
 .disabled > img {
     transform: translate(1px, 1px);
     filter:invert(1) brightness(0.5) drop-shadow(1px 1px 0px white);
@@ -567,7 +571,7 @@ button:focus {
     border-color: black white white black;
 }
 
-.taskbar-button p {
+.taskbar-button p{
     text-align: center;
     vertical-align: middle;
 
@@ -613,7 +617,7 @@ button:focus {
     height: 20px;
 }
 
-.StartButton p {
+.StartButton p{
     text-align: center;
     vertical-align: middle;
 
@@ -696,7 +700,7 @@ button:focus {
     height: 20px;
 }
 
-.Widgets p {
+.Widgets p{
     margin: 0;
     font-size: calc(14px - var(--fontsize));
     line-height: 0px;
@@ -758,11 +762,16 @@ button:focus {
 
     border-style: solid;
     border-width: 2px;
-    border-color: var(--secbody-color);
+    border-color: black white white black;
 }
 
 .Notification button:active{
-    background-color: #d4d6b2;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;
+
+    background-image: radial-gradient(var(--body-color) 1px, white 1px);
+    background-size: 4px 4px;
 }
 
 .Notification div{
@@ -819,6 +828,8 @@ button:focus {
     border-color: var(--body-color) black black var(--body-color);
     box-shadow: -1px -1px var(--terbody-color) inset, 1px 1px white inset;
 
+    box-sizing: border-box;
+
     display: flex;
     flex-direction: column;
 }
@@ -838,117 +849,6 @@ button:focus {
     box-sizing: border-box;
 }
 
-/* 
-    P R E V I E W   W T O P  -  B A R 
-*/
-/*
-.preview{
-    background: var(--bakground-color);
-
-    width: 100%;
-    height: 200px;
-
-    border-style: solid;
-    border-width: 2px;
-    border-color: black white white black;
-    margin-bottom: 10px;
-    box-shadow: -1px -1px var(--terbody-color) inset, 1px 1px white inset;
-    z-index: 1;
-}
-
-.preview-Window{
-
-    font-size: calc(14px - var(--fontsize));
-    padding: 2px;
-
-    color: black;
-    background-color: var(--body-color);
-
-    border-style: solid;
-    border-width: 2px;
-    border-color: white black black white;
-}
-.Preview-WTop-Bar{
-    user-select: none;
-    display: flex;
-    flex-direction: row;
-
-
-    justify-content: space-between;
-    height: 24px;
-
-    align-items: center;
-    padding: 0px 2px 0px 2px;
-    margin-bottom: 2px;
-
-    background: var(--terbody-color);
-    color: var(--body-color);
-
-    line-height: 0;
-}
-.Preview-WTop-Bar div{
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    flex-wrap: nowrap;
-    padding-left: 2px;
-}
-
-.Preview-WTop-Bar div p{
-    left: 6px;
-    top: 2px;
-    text-align: left;
-    font-weight:bolder;
-}
-
-.Preview-WTop-Bar div img{
-    transform: translateX(-1px)translateY(3px);
-
-    width: 20px;
-    height: 20px;
-}
-
-.Preview-WTop-Bar div button img{
-    left: auto;
-    top: auto;
-}
-
-.Preview-WTop-Bar div button{
-    height: 21px;
-    width: 21px;
-
-    background-color: var(--body-color);
-
-    border-style: solid;
-    border-width: 2px;
-    border-color: white black black white;
-    
-    line-height: 0px;
-}
-
-.Preview-WTop-Bar div button:active{
-    background-color: var(--secbody-color);
-
-    border-style: solid;
-    border-width: 2px;
-    border-color: black white white black;
-    
-    line-height: 0px;
-}
-
-.Preview-WTop-Bar div button img{
-    position: absolute;
-    padding: 0px;
-    margin: 0px;
-
-    line-height: 0px;
-
-    transform: translate(-50%, -50%);
-    width: 12px;
-
-    -webkit-user-drag:none;
-}
-*/
 /*
     W I N D O W  -  T O P   B A R
 */
@@ -1019,11 +919,19 @@ button:focus {
     
     line-height: 0px;
 }
+.WTop-Bar > div > button.disabled:active{
+    border-color: white black black white;
+    box-shadow: -1px -1px var(--terbody-color) inset;
+
+}
 .WTop-Bar > div > button:focus{
     outline: none;
 }
 .WTop-Bar > div > button:active > img{
     transform: translate(calc(-50% + 1px), calc(-50% + 1px));
+}
+.WTop-Bar > div > button.disabled:active > img {
+    transform: translate(calc(-50%), calc(-50%));
 }
 
 .WTop-Bar > div > button > img{
