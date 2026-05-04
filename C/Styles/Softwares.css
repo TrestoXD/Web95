@@ -523,3 +523,28 @@ hr{
     width: min-content;
     text-wrap: nowrap;
 }
+
+.run{
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+.run p{
+    margin: 5px;
+}
+.run div:nth-child(2){
+    display: flex;
+    flex-direction: row;
+}
+.run div:nth-child(3){
+    text-align: end;
+    justify-content: end;
+}
+.run button{
+    width: 80px;
+    height: 24px;
+}

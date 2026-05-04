@@ -11,7 +11,7 @@ let activeMoveHandler = null;
 
 
 class explorer{
-    constructor(title = "Hello World" ,pid = "00001" ,description = "This is a process without description", width = "450", height = "300", image = "./Styles/icons/System/windowslogo.ico", resizeable = true, maximizable = true, minimizable = true, ontop = false, movable = true, buttonontaskbar = true, closable=true, content = "Hello World! this is text here!"){
+    constructor(title = "Hello World" ,pid = "00001" ,description = "This is a process without description", width = "450", height = "300", image = "./Styles/windowsicons/windows.png", resizeable = true, maximizable = true, minimizable = true, ontop = false, movable = true, buttonontaskbar = true, closable=true, content = "Hello World! this is text here!"){
         this.title = title
         this.pid = pid
         this.description = description
