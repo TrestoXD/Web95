@@ -254,7 +254,9 @@ input{
     width: 100%;
     max-height: 15px;
     margin-top: 3px;
-
+}
+input:focus{
+    outline: none;
 }
 
 
@@ -973,10 +975,16 @@ button[disabled] img{
 .WTop-Bar-detectable{
     display: flex;
 }
+.WTop-Bar > div > button > img[alt="h"]{
+    transform: translate(-55%, -55%) scale(0.75);
+}
 .WTop-Bar > div > button > img[alt="0"]{
     transform: translate(-60%, 20%) scale(0.8);
 }
-.WTop-Bar > div > button:nth-child(3){
+.WTop-Bar > div > button:nth-child(3):has(img[alt="r"]){
+    margin-left: 2px
+}
+.WTop-Bar > div > button:nth-child(4):has(img[alt="r"]){
     margin-left: 2px
 }
 

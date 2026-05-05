@@ -22,6 +22,7 @@ class explorer{
         this.maximizable = maximizable
         this.minimizable = minimizable
         this.closable = closable
+        this.isdialog = isdialog
 
         this.ontop = ontop
         this.movable = movable
@@ -107,7 +108,7 @@ class explorer{
     }
 }
 class topbar{
-    constructor(title = "Hello World",pid = "00001",image = "./Styles/windowsicons/windows.png",minimizable = true,maximizable = true,closable = true,isdialog = false,) {
+    constructor(title = "Hello World",pid = "00001",image = "./Styles/windowsicons/windows.png",minimizable = true,maximizable = true,closable = true,isdialog = false) {
 
     this.title = title;
     this.pid = pid;

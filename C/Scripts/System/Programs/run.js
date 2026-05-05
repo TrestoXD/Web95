@@ -1,6 +1,6 @@
 function runexe(){
 
-new explorer("Run", undefined,"The run program is to run apps in a fast and easy way","400","155",false,false,false,true,true,false,true,true,
+new explorer("Run", undefined,"The run program is to run apps in a fast and easy way","400","155",false,false,false,true,true,true,true,true,
     `
     <div class="run">
         <div>
@@ -11,13 +11,29 @@ new explorer("Run", undefined,"The run program is to run apps in a fast and easy
             <input type="text" id="run-input">
         </div>
         <div>
-            <button onclick="run_ok(this)">Ok</button>
+            <button onclick="run_ok(this)" id="run_ok" class="disabled">Ok</button>
             <button onclick="LocateCloseWindow(this)">Cancel</button>
             <button>Browse...</button>
         </div>
     </div>
     `).BuildWindow();
+
+    document.getElementById("run-input").focus();
+
+    const input = document.getElementById("run-input");
+    let button = document.getElementById("run_ok");
+
+    input.addEventListener('input', () => {
+        if(input.value.trim() === '') {
+            button.classList.add("disabled")
+            button.setAttribute("onclick", "")
+        }else{
+            button.classList.remove("disabled");
+            button.setAttribute("onclick", "run_ok(this)")
+        }
+    })
 }
+
 function run_ok(button){
     const string = document.getElementById("run-input").value;
 
