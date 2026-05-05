@@ -166,7 +166,12 @@ function BuildTaskbarButton(pid, title, image){
     // ADDS THE BUTTON TO YOUR SCREEN
     taskbarbuttonlocation.insertAdjacentElement('beforeend', taskbarbutton);
 }
+function CloseWindow(title, pid){
+    // LOCATES ALL THE ELEMENTS WITH THIS COMMON TAGS AND VANISHED THEM FOREVER :D
+    const elementsToRemove = document.querySelectorAll(`[title="${title}"][pid="${pid}"]`);
 
+    elementsToRemove.forEach(el => el.remove());
+}
 function explorerclickManager(event, title, pid) {
     const TopBars = document.querySelectorAll(`.WTop-Bar[title="${title}"][pid="${pid}"]`);
     const CurrentWindow = document.querySelector(`[title="${title}"][pid="${pid}"]`);

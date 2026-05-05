@@ -6,12 +6,33 @@ new explorer("Run", undefined,"The run program is to run apps in a fast and easy
         </div>
         <div>
             <p>Open:</p>
-            <input type="text" id="input-run">
+            <input type="text" id="run-input">
         </div>
         <div>
-            <button>Ok</button>
+            <button onclick=run_ok('msinfo32')>Ok</button>
             <button>Cancel</button>
             <button>Browse...</button>
         </div>
     </div>
     `).BuildWindow();
+
+function run_ok(){
+    const string = document.getElementById("run-input").value;
+
+    const data = {};
+
+    // ALL THE DATA FROM THE RUN
+    data["cmd"] = { name: "cmd", dir:"cmdexe"};
+    data["msinfo32"] = {name:"msinfo32"}
+
+    if(data[string]){
+        if(data[string].dir){
+            window[data[string].dir]();
+            CloseWindow("Run", "00001")
+        }else{
+            syserror("Web95 couldn't find the dir of the Program. Make sure that the dir is correctly writed and try again.")
+        }
+    }else{
+        syserror("Web95 couldn't find the program. Make sure that the name is well writed and try again.")
+    }
+}
