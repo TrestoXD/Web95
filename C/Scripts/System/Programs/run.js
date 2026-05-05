@@ -32,6 +32,12 @@ new explorer("Run", undefined,"The run program is to run apps in a fast and easy
             button.setAttribute("onclick", "run_ok(this)")
         }
     })
+    input.addEventListener("keypress", function(event){
+        if(event.key === "Enter") {
+            event.preventDefault();
+            button.click();
+        }
+    })
 }
 
 function run_ok(button){
