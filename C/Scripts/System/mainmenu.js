@@ -34,7 +34,7 @@ function mainmenuExe(){
                 <button class="button_noborder" onmouseenter="MainmenusecExe('200px','206px',true,true, '${Settings_Menu}')"> <img src="./Styles/AppIcons/settingsgear.ico" style=scale:1.5;> <p>Settings</p> <img class=arrow src=./Styles/icons/System/Arrow.ico> </button>
                 <button class="button_noborder" onmouseenter="MainmenusecExe('200px','166px',true,true, '${Find_Menu}')"> <img src="./Styles/AppIcons/searchfile.ico"> <p>Search</p> <img class="arrow" src=./Styles/icons/System/Arrow.ico> </button>
                 <button class="button_noborder" onmouseenter="Delete_MainmenusecExe()" onclick="WebhelpEXE()"> <img src=./Styles/AppIcons/helpbookbig.ico> <p>Help</p></button>
-                <button class="button_noborder" onmouseenter="Delete_MainmenusecExe()"> <img src=./Styles/AppIcons/applicationhourglass.ico> <p class="disabled">Execute</p></button>
+                <button class="button_noborder" onmouseenter="Delete_MainmenusecExe()" onclick="runexe()"> <img src=./Styles/AppIcons/applicationhourglass.ico> <p>Execute</p></button>
                 <hr>
                 <button class="button_noborder" onmouseenter="Delete_MainmenusecExe()" style=bottom:0;> <img src=./Styles/AppIcons/shutdownnormal.ico style='height: 45px; margin:-6px'> <p class="disabled">ShutDown...</p></button>
             </div>
@@ -42,7 +42,7 @@ function mainmenuExe(){
         `);
 }
 
-let Programs_Menu = `<div> <button class=button_noborder onclick=CmdEXE()> <img src=./Styles/AppIcons/msdos1.ico> MS-DOS Prompt</button> <button class=button_noborderdisabled><img src=./Styles/icons/System/WindowsExplorer.ico>Windows Explorer</button> </div>`
+let Programs_Menu = `<div> <button class=button_noborder onclick=cmdexe()> <img src=./Styles/AppIcons/msdos1.ico> MS-DOS Prompt</button> <button class=button_noborderdisabled><img src=./Styles/icons/System/WindowsExplorer.ico>Windows Explorer</button> </div>`
 let Documentos_Menu = `<div> <button class=button_noborder onclick=ReadmeEXE()> <img src=./Styles/AppIcons/doc_Notepad.ico> Readme.txt</button> </div>`
 let Settings_Menu = `<div><button class=button_noborder onclick=ControlpanelEXE()>Control panel</button> <button class=button_noborderdisabled>Taskbar & Start Menu...</button> </div>`
 let Find_Menu = `<div> <button class=button_noborderdisabled>Files or Folders...</button> <button class=button_noborderdisabled>On The XD Network...</button> </div>`

@@ -1,4 +1,6 @@
-new explorer("Run", undefined,"The run program is to run apps in a fast and easy way","400","155",undefined,false,false,true,true,false,true,true,
+function runexe(){
+
+new explorer("Run", undefined,"The run program is to run apps in a fast and easy way","400","155",false,false,false,true,true,false,true,true,
     `
     <div class="run">
         <div>
@@ -9,14 +11,14 @@ new explorer("Run", undefined,"The run program is to run apps in a fast and easy
             <input type="text" id="run-input">
         </div>
         <div>
-            <button onclick=run_ok('msinfo32')>Ok</button>
-            <button>Cancel</button>
+            <button onclick="run_ok(this)">Ok</button>
+            <button onclick="LocateCloseWindow(this)">Cancel</button>
             <button>Browse...</button>
         </div>
     </div>
     `).BuildWindow();
-
-function run_ok(){
+}
+function run_ok(button){
     const string = document.getElementById("run-input").value;
 
     const data = {};
@@ -28,7 +30,7 @@ function run_ok(){
     if(data[string]){
         if(data[string].dir){
             window[data[string].dir]();
-            CloseWindow("Run", "00001")
+            LocateCloseWindow(button);
         }else{
             syserror("Web95 couldn't find the dir of the Program. Make sure that the dir is correctly writed and try again.")
         }

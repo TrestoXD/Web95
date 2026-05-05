@@ -29,11 +29,7 @@ class explorer{
 
         this.content = `
         <div class="WTop-Bar" pid="${this.pid}" title="${this.title}"> 
-            <div> <img src="${this.image}" class="icon" id="${pid}">
-            <p id="${this.pid}">${this.title}</p> </div> 
-            <div>
-                ${new topbar(this.title,this.pid,this.image, this.minimizable,this.maximizable,this.closable,this.isdialog).renderbuttons()}
-            </div>  
+            ${new topbar(this.title,this.pid,this.image, this.minimizable,this.maximizable,this.closable,this.isdialog).renderbuttons()}
         </div>
         ${content}`;
     }
@@ -111,11 +107,11 @@ class explorer{
     }
 }
 class topbar{
-    constructor(title = "Hello World",pid = "00001",icon = "./Styles/windowsicons/windows.png",minimizable = true,maximizable = true,closable = true,isdialog = false,) {
+    constructor(title = "Hello World",pid = "00001",image = "./Styles/windowsicons/windows.png",minimizable = true,maximizable = true,closable = true,isdialog = false,) {
 
     this.title = title;
     this.pid = pid;
-    this.icon = icon;
+    this.image = image;
     this.minimizable = minimizable;
     this.maximizable = maximizable;
     this.closable = closable;
@@ -127,6 +123,12 @@ class topbar{
         const showminmaxgroup = this.minimizable || this.maximizable;
 
         return `
+            <div> 
+                ${this.image ? `<img src="${this.image}" class="icon" id="${this.pid}">` : ''}
+                <p id="${this.pid}">${this.title}</p> 
+            </div> 
+
+            <div>
             ${this.isdialog ? `<button pid="${this.pid}" title="${this.title}" onclick=""> <img src="./Styles/icons/help.svg" alt="h"> </button>` : ''}
             
             ${showminmaxgroup ? `
@@ -142,6 +144,7 @@ class topbar{
                 <button onclick="new explorer().CloseWindow('${this.title}','${this.pid}');" ${!this.closable ? 'disabled' : ''}> 
                     <img src="./Styles/icons/close.svg" alt="r"> 
                 </button>
+            </div>
             ` : ''}
         `;
     }
@@ -166,11 +169,19 @@ function BuildTaskbarButton(pid, title, image){
     // ADDS THE BUTTON TO YOUR SCREEN
     taskbarbuttonlocation.insertAdjacentElement('beforeend', taskbarbutton);
 }
+function LocateCloseWindow(button){
+    const windowelement = button.closest('.Window');
+
+    title = windowelement.getAttribute("title");
+    pid = windowelement.getAttribute("pid");
+
+    CloseWindow(title, pid)
+}
 function CloseWindow(title, pid){
     // LOCATES ALL THE ELEMENTS WITH THIS COMMON TAGS AND VANISHED THEM FOREVER :D
     const elementsToRemove = document.querySelectorAll(`[title="${title}"][pid="${pid}"]`);
 
-    elementsToRemove.forEach(el => el.remove());
+    elementsToRemove.forEach(el => el.remove());   
 }
 function explorerclickManager(event, title, pid) {
     const TopBars = document.querySelectorAll(`.WTop-Bar[title="${title}"][pid="${pid}"]`);
@@ -180,29 +191,37 @@ function explorerclickManager(event, title, pid) {
         bar.style.background = '';
         bar.style.color = '';
     })
+    document.querySelectorAll(`.Window`).forEach(wins =>
+    {
+        wins.style.zIndex = 1
+    })
 
     TopBars.forEach(bar => {
         bar.style.background = 'var(--selection-color)';
         bar.style.color = 'white';
+        CurrentWindow.style.zIndex = 99999; 
     })
 
     startX = event.clientX - CurrentWindow.offsetLeft;
     startY = event.clientY - CurrentWindow.offsetTop;
 
-    activeMoveHandler = (e) => {
-        let newX = e.clientX - startX;
-        let newY = e.clientY - startY;
-        CurrentWindow.style.top = newY + 'px';
-        CurrentWindow.style.left = newX + 'px';
-    };
+    if(event.target.closest(".WTop-Bar")){
+        activeMoveHandler = (e) => {
+            let newX = e.clientX - startX;
+            let newY = e.clientY - startY;
+            CurrentWindow.style.top = newY + 'px';
+            CurrentWindow.style.left = newX + 'px';
+        };
 
-    document.addEventListener('mousemove', activeMoveHandler);
+        document.addEventListener('mousemove',  activeMoveHandler);
     
-    document.addEventListener('mouseup', function _up() {
-        document.removeEventListener('mousemove', activeMoveHandler);
-        document.removeEventListener('mouseup', _up);
+        document.addEventListener('mouseup', function _up() {
+            document.removeEventListener('mousemove', activeMoveHandler);
+            document.removeEventListener('mouseup', _up);
 
-    }, { once: true });
+        }, { once: true });
+    }
+    
 }
 
 function explorerminimize(title, pid){
