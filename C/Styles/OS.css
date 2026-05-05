@@ -357,7 +357,15 @@ button:focus {
     outline-offset: -6px;
     box-shadow: -1px -1px var(--terbody-color) inset, 0px 0px 0px 2px black;
 }
-
+button[disabled]{
+    color: var(--secbody-color);
+    text-shadow: 1px 1px 0px white;
+    pointer-events: none;
+}
+button[disabled] img{
+    transform: translate(1px, 1px);
+    filter:invert(1) brightness(0.5) drop-shadow(1px 1px 0px white);
+}
 .button_noborder{
     border: none;
     box-shadow: none;

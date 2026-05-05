@@ -524,6 +524,7 @@ hr{
     text-wrap: nowrap;
 }
 
+/* RUN PROGRAM */
 .run{
     padding-left: 15px;
     padding-right: 15px;
@@ -541,6 +542,7 @@ hr{
     flex-direction: row;
 }
 .run div:nth-child(3){
+    padding-top: 10px;
     text-align: end;
     justify-content: end;
 }

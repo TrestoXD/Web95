@@ -11,51 +11,31 @@ let activeMoveHandler = null;
 
 
 class explorer{
-    constructor(title = "Hello World" ,pid = "00001" ,description = "This is a process without description", width = "450", height = "300", image = "./Styles/windowsicons/windows.png", resizeable = true, maximizable = true, minimizable = true, ontop = false, movable = true, buttonontaskbar = true, closable=true, content = "Hello World! this is text here!"){
+    constructor(title = "Hello World" ,pid = "00001" ,description = "This is a process without description", width = "450", height = "300", image = "./Styles/windowsicons/windows.png", maximizable = true, minimizable = true, closable=true, ontop = false, isdialog = false, movable = true, buttonontaskbar = true, content = "Hello World! this is text here!"){
         this.title = title
         this.pid = pid
         this.description = description
         this.width = width
         this.height = height
         this.image = image
-        this.resizeable = resizeable
+        // OPTIONS FOR THE TOPBAR
         this.maximizable = maximizable
         this.minimizable = minimizable
+        this.closable = closable
+
         this.ontop = ontop
+        this.movable = movable
         this.buttonontaskbar = buttonontaskbar
 
-        if(this.minimizable){
         this.content = `
-            <div class="WTop-Bar" pid="${this.pid}" title="${this.title}"> 
-                <div> <img src="${this.image}" class="icon WTop-Bar-detectable" id="${pid}"> <p class="WTop-Bar-detectable" id="${this.pid}">${this.title}</p> </div> 
-                <div> 
-                    <button pid="${this.pid}" title="${this.title}" onclick="explorerminimize('${this.title}','${this.pid}')"> <img src="./Styles/icons/minimize.svg" alt="0"> </button> 
-                    <button pid="${this.pid}" title="${this.title}" onclick="explorermaximize('${this.title}','${this.pid}')"> <img src="./Styles/icons/maximize.svg" alt="1"> </button>
-                    <button onclick="new explorer().CloseWindow('${this.title}','${this.pid}');"> <img src="./Styles/icons/close.svg" alt="r"> </button>
-                </div>  
-            </div>
-            <div class="WInterior">
-                ${content}
-            </div> `;
-        }else if(!this.minimizable && this.image){
-        this.content = `
-            <div class="WTop-Bar" pid="${this.pid}" title="${this.title}"> 
-                <div> <img src="${this.image}" class="icon WTop-Bar-detectable" id="${pid}"> <p class="WTop-Bar-detectable" id="${this.pid}">${this.title}</p> </div> 
-                <div> 
-                    <button onclick="new explorer().CloseWindow('${this.title}','${this.pid}');"> <img src="./Styles/icons/close.svg" alt="r"> </button>
-                </div>  
-            </div>
-            ${content}`;
-        }else if(!this.image && !this.minimizable && !closable){
-            this.content = `
-            <div class="WTop-Bar" pid="${this.pid}" title="${this.title}"> 
-                <div> <p class="WTop-Bar-detectable" id="${this.pid}">${this.title}</p> </div> 
-                <div> 
-                    <button class="disabled"> <img src="./Styles/icons/close.svg" alt="r"> </button>
-                </div>  
-            </div>
-            ${content}`;  
-        }
+        <div class="WTop-Bar" pid="${this.pid}" title="${this.title}"> 
+            <div> <img src="${this.image}" class="icon" id="${pid}">
+            <p id="${this.pid}">${this.title}</p> </div> 
+            <div>
+                ${new topbar(this.title,this.pid,this.image, this.minimizable,this.maximizable,this.closable,this.isdialog).renderbuttons()}
+            </div>  
+        </div>
+        ${content}`;
     }
 
     BuildWindow(){
@@ -130,7 +110,42 @@ class explorer{
         elementsToRemove.forEach(el => el.remove());
     }
 }
+class topbar{
+    constructor(title = "Hello World",pid = "00001",icon = "./Styles/windowsicons/windows.png",minimizable = true,maximizable = true,closable = true,isdialog = false,) {
 
+    this.title = title;
+    this.pid = pid;
+    this.icon = icon;
+    this.minimizable = minimizable;
+    this.maximizable = maximizable;
+    this.closable = closable;
+    this.isdialog = isdialog;
+
+    }
+
+    renderbuttons(){
+        const showminmaxgroup = this.minimizable || this.maximizable;
+
+        return `
+            ${this.isdialog ? `<button pid="${this.pid}" title="${this.title}" onclick=""> <img src="./Styles/icons/help.svg" alt="h"> </button>` : ''}
+            
+            ${showminmaxgroup ? `
+                <button pid="${this.pid}" title="${this.title}" onclick="explorerminimize('${this.title}','${this.pid}')" ${!this.minimizable ? 'disabled' : ''}> 
+                    <img src="./Styles/icons/minimize.svg" alt="0"> 
+                </button> 
+                <button pid="${this.pid}" title="${this.title}" onclick="explorermaximize('${this.title}','${this.pid}')" ${!this.maximizable ? 'disabled' : ''}> 
+                    <img src="./Styles/icons/maximize.svg" alt="1"> 
+                </button>        
+            ` : ''}
+
+            ${this.closable !== undefined ? `
+                <button onclick="new explorer().CloseWindow('${this.title}','${this.pid}');" ${!this.closable ? 'disabled' : ''}> 
+                    <img src="./Styles/icons/close.svg" alt="r"> 
+                </button>
+            ` : ''}
+        `;
+    }
+}
 function BuildTaskbarButton(pid, title, image){
     // CREATES THE TASKBAR BUTTON ELEMENT AND LOCATES THE POSITION WHERE THE APP BELONGS
     const taskbarbutton = document.createElement("button");

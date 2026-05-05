@@ -1,4 +1,4 @@
-new explorer("Run", undefined,"The run program is to run apps in a fast and easy way","400","155",undefined,false,false,false,true,true,true,true,
+new explorer("Run", undefined,"The run program is to run apps in a fast and easy way","400","155",undefined,false,false,true,true,false,true,true,
     `
     <div class="run">
         <div>
@@ -6,7 +6,7 @@ new explorer("Run", undefined,"The run program is to run apps in a fast and easy
         </div>
         <div>
             <p>Open:</p>
-            <input type="text">
+            <input type="text" id="input-run">
         </div>
         <div>
             <button>Ok</button>
