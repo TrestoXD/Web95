@@ -95,11 +95,11 @@ if(socialmedia_widget){
     const socialpos = document.getElementById("widgetsarea");
 
     socialdiv.innerHTML = `
-        <button class="button_noborder" onclick="window.open('https://discord.gg/xn3VcQkMWh')"><img src="./Styles/AppIcons/discord.png" alt="discord"></button>
-        <button class="button_noborder" onclick="window.open('https://github.com/TrestoXD')"><img src="./Styles/AppIcons/github.png" alt="github"></button>
-        <button class="button_noborder" onclick="window.open('https://www.instagram.com/trestoxd/')"><img src="./Styles/AppIcons/camera-0.png" alt="Instagram"></button>
-        <button class="button_noborder" onclick="window.open('https://www.youtube.com/@Tresto_XD')"><img src="./Styles/AppIcons/youtube.png" alt="Youtube"></button>
-        <button class="button_noborder" onclick="window.open('https://www.tiktok.com/@tresto_xd?_r=1&_t=ZN-95Py80ekmso')"><img src="./Styles/AppIcons/tiktok.png" alt="Tiktok"></button>
+        <button class="button_noborder" onclick="window.open('https://discord.gg/xn3VcQkMWh')"><img src="./Styles/windowsicons/phone.png" alt="discord"></button>
+        <button class="button_noborder" onclick="window.open('https://github.com/TrestoXD')"><img src="./Styles/windowsicons/media-floppy.png" alt="github"></button>
+        <button class="button_noborder" onclick="window.open('https://www.instagram.com/trestoxd/')"><img src="./Styles/windowsicons/applets-screenshooter.png" alt="Instagram"></button>
+        <button class="button_noborder" onclick="window.open('https://www.youtube.com/@Tresto_XD')"><img src="./Styles/windowsicons/mediaplayer.ico" alt="Youtube"></button>
+        <button class="button_noborder" onclick="window.open('https://www.tiktok.com/@tresto_xd?_r=1&_t=ZN-95Py80ekmso')"><img src="./Styles/windowsicons/media-optical-audio.png" alt="Tiktok"></button>
     `
     socialpos.insertAdjacentElement('afterbegin', socialdiv)}catch{}
 }

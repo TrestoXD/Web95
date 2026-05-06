@@ -4,6 +4,7 @@ new explorer("Run", undefined,"The run program is to run apps in a fast and easy
     `
     <div class="run">
         <div>
+            <img src="./Styles/AppIcons/applicationhourglass.ico">
             <p>Type the name of a program, folder, or document,and Web95 will try to open it for you.</p>
         </div>
         <div>
