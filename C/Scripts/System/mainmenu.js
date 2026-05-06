@@ -23,10 +23,10 @@ function mainmenuRemove(){
 
 function mainmenuExe(){
     console.log("opening menu...")
-    MainmenuExe('0px','40px', true,false,`
+    MainmenuExe('0px','30px', true,false,`
         <div style="display:flex">
-            <div style="height:300px; background-color:gray; display:flex; align-items: flex-end;">
-                <img src="./Styles/icons/System/sidebar95.png" id="minmenus" style="height:200px; ">
+            <div class="title">
+                <h1>WEB<span>95</span><h1>
             </div>
             <div style="display:flex; flex-direction:column; width:100%;">
                 <button class="button_noborder" onmouseenter="MainmenusecExe('200px','286px',true,true, '${Programs_Menu}')"> <img src="./Styles/AppIcons/directoryprogramgroup.ico"> <p>Programs</p> <img class=arrow src=./Styles/icons/System/Arrow.ico> </button>

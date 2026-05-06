@@ -76,7 +76,7 @@ class explorer{
         windows.innerHTML = this.content
 
         // ADDS THE WINDOW TO YOUR SCREEN :D
-        windowlocation.insertAdjacentElement("afterbegin", windows);
+        windowlocation.insertAdjacentElement("beforeend", windows);
         windows.addEventListener("mousedown", (e) => explorerclickManager(e, this.title,this.pid))
         // SUPER COOL CONSOLE LOG FOR THE DEBUGS :O
         console.log(`New Window created: TITLE: "${this.title}" PID: ${this.pid}`)
@@ -214,7 +214,7 @@ class topbar{
 function BuildTaskbarButton(pid, title, image){
     // CREATES THE TASKBAR BUTTON ELEMENT AND LOCATES THE POSITION WHERE THE APP BELONGS
     const taskbarbutton = document.createElement("button");
-    const taskbarbuttonlocation = document.getElementById("Apps");
+    const taskbarbuttonlocation = document.getElementById("tasksarea");
 
     // ADDS ALL THE VARIABLES NEEDED INTO THE TASKBAR BUTTON;
     taskbarbutton.classList.add("taskbar-button");

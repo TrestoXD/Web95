@@ -205,6 +205,10 @@ html{
     font-family: Marlet;
     src: url(./Fonts/Marlet.ttf);
 }
+@font-face {
+    font-family: ACE;
+    src: url(./Fonts/ace.ttf);
+}
 
 
 
@@ -537,7 +541,7 @@ button[disabled] img{
     T A S K B A R 
 */
 
-.Taskbar{
+#taskbar{
     width: 100%;
     position: fixed;
     bottom: 0px;
@@ -549,18 +553,19 @@ button[disabled] img{
 
     background-color: var(--body-color);
 
-    border-color: white none none none;
+    border-color: white white white white;
     border-style: solid;
     border-width: 2px 0px 0px 0px;
 
     z-index: 9999999999999;
-}
-
-.Taskbar div{
     display: flex;
 }
 
-.Taskbar hr{
+#taskbar div{
+    display: flex;
+}
+
+#taskbar hr{
     padding: 0px;
     margin: 0px 3px 0px 3px;
 
@@ -656,7 +661,7 @@ button[disabled] img{
     T A S K B A R  -  S O C I A L
 */
 
-.Social{
+#atachesdarea{
     display: flex;
     right: 0;
 
@@ -667,20 +672,20 @@ button[disabled] img{
     background-color: transparent;
 }
 
-.Social button{
+#atachesdarea button{
     background-color: transparent;
     border: transparent;
 }
 
-.Social button:hover{
+#atachesdarea button:hover{
     background: var(--selection-color);
 }
 
-.Social button:active img{
+#atachesdarea button:active img{
     filter: invert();
 }
 
-.Social button img{
+#atachesdarea button img{
     padding: 0;
     margin: 0;
 
@@ -694,7 +699,7 @@ button[disabled] img{
     T A S K B A R  -  W I D G E T S 
 */
 
-.Widgets{
+#widgetsarea {
     display: flex;
     flex-direction: row;
     right: 0;
@@ -711,12 +716,12 @@ button[disabled] img{
     padding: 0px 5px 0px 0px;
 }
 
-.Widgets button{
+#widgetsarea button{
     background-color: transparent;
     border-style: none;
 }
 
-.Widgets button img{
+#widgetsarea button img{
     padding: 0px;
     margin: 0px;
 
@@ -724,20 +729,20 @@ button[disabled] img{
     height: 20px;
 }
 
-.Widgets p{
+#widgetsarea p{
     margin: 0;
     font-size: calc(14px - var(--fontsize));
     line-height: 0px;
     color: black;
 }
 
-#Apps{
+#tasksarea{
     width: 100%;
     display: flex;
 
     flex-direction: row;
 }
-.Apps button{
+#tasksarea button{
     margin-right: 3px;
 }
 /*.Apps button{
@@ -1041,7 +1046,7 @@ button[disabled] img{
 
 #minmenu{
     position:absolute;
-    z-index: 999999999999999;
+    z-index: 100000;
     padding: 2px;
 
     margin: 0;
@@ -1058,7 +1063,29 @@ button[disabled] img{
     max-width: 200px;
     width: 200px;
 }
+#minmenu h1{
+    font-family: ACE;
+    writing-mode: sideways-lr;
+    text-orientation:mixed;
 
+    font-size: 20px;
+    font-weight: 900;
+    transform: translateX(12px) translateY(-10px);
+
+    color: var(--body-color);
+}
+#minmenu .title{
+    height:300px; 
+    width: 32px;
+    background-color:var(--terbody-color); 
+    display:flex;
+}
+#minmenu span{
+    font-family:ACE;
+    font-size: 20px;
+    color:white;
+    font-weight: 100;
+}
 #minmenu img{
 
     display: block;    
