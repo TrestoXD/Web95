@@ -23,7 +23,7 @@ function mainmenuRemove(){
 
 function mainmenuExe(){
     console.log("opening menu...")
-    MainmenuExe('0px','30px', true,false,`
+    MainmenuExe('0px','34px', true,false,`
         <div style="display:flex">
             <div class="title">
                 <h1>WEB<span>95</span><h1>

@@ -557,7 +557,7 @@ button[disabled] img{
     border-style: solid;
     border-width: 2px 0px 0px 0px;
 
-    z-index: 9999999999999;
+    z-index: 100000;
     display: flex;
 }
 
@@ -1046,7 +1046,7 @@ button[disabled] img{
 
 #minmenu{
     position:absolute;
-    z-index: 100000;
+    z-index: 100001;
     padding: 2px;
 
     margin: 0;
