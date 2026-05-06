@@ -54,7 +54,12 @@ class explorer{
         windows.setAttribute('pid',this.pid);
         windows.setAttribute('title', this.title);
         windows.style.width = this.width + "px";
+
+        if(this.height == "auto"){
+        windows.style.height = "auto";
+        }else{
         windows.style.height = this.height + "px";
+        }
         
         if(this.title === lastwindowtitle){
             const lastwindow = document.querySelector(`[title="${lastwindowtitle}"][pid="${lastwindowpid}"]`);
@@ -67,8 +72,12 @@ class explorer{
                 windows.style.top = (lasttop + 20) + "px";
             } 
         }else{
+            if(this.height == "auto"){
+                windows.style.top = ((window.innerHeight / 2 ) - 75 + "px");    
+            }else{
+                windows.style.top = ((window.innerHeight - this.height)  / 2 + "px"); 
+            }
             windows.style.left = ((window.innerWidth - this.width)  / 2 + "px");
-            windows.style.top = ((window.innerHeight - this.height)  / 2 + "px"); 
         }
         lastwindowpid = this.pid;
         lastwindowtitle = this.title;
@@ -101,71 +110,6 @@ class explorer{
             bar.style.color = 'white';
             windows.style.zIndex = 99999
         })
-    }
-    BuildWindow_Error(image, error){
-        // CREATES THE MAIN WINDOW AND LOCATES THE POSITION
-        const windows = document.createElement("div");
-        const windowlocation = document.getElementById("Desktop");
-
-        // ADDS ALL THE VARIABLES NEEDED INTO THE WINDOW 
-        windows.classList.add("Window");
-        windows.setAttribute('pid',this.pid);
-        windows.setAttribute('title', this.title);
-        windows.style.width = this.width + "px";
-        windows.style.height = "auto";
-
-        if(this.title === lastwindowtitle){
-            const lastwindow = document.querySelector(`[title="${lastwindowtitle}"][pid="${lastwindowpid}"]`);
-
-            if(lastwindow){
-                const lastleft = parseInt(lastwindow.style.left) || 0;
-                const lasttop = parseInt(lastwindow.style.top) || 0;
-            
-                windows.style.left = (lastleft + 20) + "px";
-                windows.style.top = (lasttop + 20) + "px";
-            } 
-        }else{
-            windows.style.left = ((window.innerWidth - this.width)  / 2 + "px");
-            windows.style.top = ((window.innerHeight - this.height)  / 2 + "px"); 
-        }
-        lastwindowpid = this.pid;
-        lastwindowtitle = this.title;
-
-        windows.style.zIndex = 1;
-        windows.innerHTML = this.content
-
-        // ADDS THE WINDOW TO YOUR SCREEN :D
-        windowlocation.insertAdjacentElement("beforeend", windows);
-        windows.addEventListener("mousedown", (e) => explorerclickManager(e, this.title,this.pid))
-        // SUPER COOL CONSOLE LOG FOR THE DEBUGS :O
-        console.log(`New Window created: TITLE: "${this.title}" PID: ${this.pid}`)
-        
-        // CREATE THE BUTTON ON THE TASKBAR
-        if(this.buttonontaskbar){
-        BuildTaskbarButton(this.pid, this.title, false);
-        }
-
-        // SELECT THE WINDOW
-        document.querySelectorAll('.WTop-Bar').forEach(bar =>{
-        bar.style.background = '';
-        bar.style.color = '';
-        })
-        document.querySelectorAll(`.Window`).forEach(wins =>
-        {
-            wins.style.zIndex = 1
-        })
-        const TopBars = document.querySelectorAll(`.WTop-Bar[title="${this.title}"][pid="${this.pid}"]`);
-        TopBars.forEach(bar => {
-            bar.style.background = 'var(--selection-color)';
-            bar.style.color = 'white';
-            windows.style.zIndex = 99999
-        })
-    }
-    CloseWindow(title ,pid){
-        // LOCATES ALL THE ELEMENTS WITH THIS COMMON TAGS AND VANISHED THEM FOREVER :D
-        const elementsToRemove = document.querySelectorAll(`[title="${title}"][pid="${pid}"]`);
-
-        elementsToRemove.forEach(el => el.remove());
     }
 }
 class topbar{
@@ -248,6 +192,7 @@ function CloseWindow(title, pid){
     lastwindowpid = null
     lastwindowtitle = null
 }
+
 function explorerclickManager(event, title, pid) {
     const TopBars = document.querySelectorAll(`.WTop-Bar[title="${title}"][pid="${pid}"]`);
     const CurrentWindow = document.querySelector(`[title="${title}"][pid="${pid}"]`);
@@ -286,7 +231,6 @@ function explorerclickManager(event, title, pid) {
 
         }, { once: true });
     }
-    
 }
 
 function explorerminimize(title, pid){

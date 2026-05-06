@@ -1,11 +1,11 @@
 function NotificationExe(title, content){
     //Variables
-    const icon = './Styles/icons/System/info.ico'
+    const icon = './Styles/windowsicons/dialog-information.png'
     
     const mainDiv = document.createElement("not")
 
     mainDiv.classList.add("Notification");
-    mainDiv.style.zIndex = 999999;
+    mainDiv.style.zIndex = 100000;
     mainDiv.style.maxWidth = '300px';
     mainDiv.style.right = '8px';
     mainDiv.style.bottom = '45px';
