@@ -528,7 +528,7 @@ button[disabled] img{
 }
 .disabled:active{
     border-color: white black black white;
-    box-shadow: -1px -1px var(--terbody-color) inset;
+    box-shadow: none;
 }
 .disabled > img {
     transform: translate(1px, 1px);
@@ -713,12 +713,14 @@ button[disabled] img{
     border-width: 2px;
     border-color: var(--terbody-color) white white var(--terbody-color);
 
-    padding: 0px 5px 0px 0px;
+    padding-top: 1px;
+    padding-bottom: 2px;
 }
 
 #widgetsarea button{
     background-color: transparent;
     border-style: none;
+    height: 24px;
 }
 
 #widgetsarea button img{
@@ -951,7 +953,7 @@ button[disabled] img{
 }
 .WTop-Bar > div > button.disabled:active{
     border-color: white black black white;
-    box-shadow: -1px -1px var(--terbody-color) inset;
+    box-shadow: none;
 
 }
 .WTop-Bar > div > button:focus{
@@ -1117,6 +1119,11 @@ button[disabled] img{
 .minmenu div button:hover{
     background: var(--selection-color);
     color: white;
+    text-shadow: none;
+}
+.minmenu div button:hover p{
+    color: white;
+    text-shadow: none;
 }
 
 .minmenu div hr{
