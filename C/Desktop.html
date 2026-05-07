@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desktop 1.1.0</title>
+    <title>Desktop 0.2.1</title>
     <link rel="stylesheet" href="./Styles/OS.css">
     <link rel="stylesheet" href="./Styles/Softwares.css">
     <link rel="stylesheet" href="./Styles/ExternalSoftwares.css">
@@ -11,17 +11,41 @@
 </head>
 <body class="Desktop" id="Desktop">
 
+    <div id="Overlay" class="overlay">
+        <!--<button ondblclick="new explorer().BuildWindow();" class="desktop_button"><img class="appicon" src="./Styles/AppIcons/emptyreciclebin.ico"> <p>Recycle bin</p></button>
+        <button ondblclick="MycomputerEXE()" class="desktop_button"><img class="appicon" src="./Styles/AppIcons/mycomputer.ico"> <p>My Computer</p> </button>
+        <button ondblclick="WellcomeExe()" class="desktop_button"><img class="appicon" src="./Styles/icons/System/windowslogo.ico"> <img src="./Styles/icons/System/Shortcut.ico" alt="" class="appdecor"> <p>Welcome.bat</p></button>-->
+    </div>
 </body>
+<!--<footer class="Taskbar" id="taskbar">
+    <div>
+        <button id="StartButton" class="StartButton" onclick="mainmenuButton()"><img src="./Styles/icons/System/windowsstartlogo.png"><p>Start</p></button>
+        <hr>
+    </div>
+    <div class="Apps" id="Apps">
+    </div>
+    <div>
+        
+        <hr id="Widgets_hr">
+        <div class="Widgets" id="Widgets">
+            
+        </div>
+    </div>
+</footer>-->
 
     <!-- SYSTEM MANAGERS -->
+    <script src="./Scripts/System/Managers/ContextmenuManager.js"></script>
+    <script src="./Scripts/System/Softwares/displayexe.js"></script>
     <script src="./Scripts/System/Managers/TaskbarManager.js"></script>
     <script src="./Scripts/System/NotificationEXE.js"></script>
     <script src="./Scripts/System/Managers/StartManager.js"></script>
     <script src="./Scripts/External/Manager/ExternalsoftwareManager.js"></script>
+    
     <script src="./Scripts/System/Softwares/explorerexe.js"></script>
     <script src="./Scripts/System/Managers/errorManager.js"></script>
 
     <!-- SYSTEM PROGRAMS -->
+    <script src="./Scripts/System/Programs/startmenu.js"></script>
     <script src="./Scripts/System/Programs/run.js"></script>
     <script src="./Scripts/System/Programs/cmd.js"></script>
 
@@ -31,6 +55,7 @@
     <script src="./Scripts/System/ContextmenuEXE.js"></script>
     <script src="./Scripts/System/winmenu.js"></script>
     <script src="./Scripts/System/mainmenu.js"></script>
+    <script src="./Scripts/System/winmenu2.js"></script>
 
     <!-- EXTERNAL SOFTWARE -->
 </html>

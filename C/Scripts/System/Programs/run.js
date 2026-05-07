@@ -1,10 +1,10 @@
 function runexe(){
 
-new explorer("Run", undefined,"The run program is to run apps in a fast and easy way","400","155",false,false,false,true,true,true,true,true,
+new explorer("Run", undefined,"The run program is to run apps in a fast and easy way","450","165",false,false,false,true,true,true,true,true,
     `
     <div class="run">
-        <div>
-            <img src="./Styles/AppIcons/applicationhourglass.ico">
+        <div style="display:flex; ">
+            <img style="height: 38px;" src="./Styles/AppIcons/applicationhourglass.ico">
             <p>Type the name of a program, folder, or document,and Web95 will try to open it for you.</p>
         </div>
         <div>

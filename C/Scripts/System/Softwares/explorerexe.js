@@ -64,13 +64,19 @@ class explorer{
         if(this.title === lastwindowtitle){
             const lastwindow = document.querySelector(`[title="${lastwindowtitle}"][pid="${lastwindowpid}"]`);
 
-            if(lastwindow){
+            if(parseInt(lastwindow.style.top) >= window.innerHeight){
+                const lastleft = parseInt(lastwindow.style.left) || 0;
+
+                windows.style.left = (innerWidth - lastleft + 40) + "px";
+                windows.style.top = (20) + "px";
+            }
+            else if(lastwindow){
                 const lastleft = parseInt(lastwindow.style.left) || 0;
                 const lasttop = parseInt(lastwindow.style.top) || 0;
             
                 windows.style.left = (lastleft + 20) + "px";
                 windows.style.top = (lasttop + 20) + "px";
-            } 
+            }
         }else{
             if(this.height == "auto"){
                 windows.style.top = ((window.innerHeight / 2 ) - 75 + "px");    
@@ -110,6 +116,46 @@ class explorer{
             bar.style.color = 'white';
             windows.style.zIndex = 99999
         })
+    }
+}
+class menu{
+    constructor(title = "Hello menu", pid = "00001", width = "150", height = "300",button, content = 'Hello text'){
+        // MENU VARIABLES
+        this.title = title;
+        this.pid = pid;
+
+        this.width = width;
+        this.height = height;
+        this.button = button;
+        if(this.button == null){
+            console.log("button not specified!")
+        }
+
+        this.content = content
+        
+        let currentpid = parseInt(this.pid);
+        while(document.querySelector(`[title="${this.title}"][pid="${this.pid}"]`)){
+            currentpid++; 
+            this.pid = currentpid.toString().padStart(5, '0');
+        }
+        // MENU BUILDER
+
+        const menu = document.createElement("div");
+        const menupos = button.getBoundingClientRect();
+        const menulocation = document.getElementById("Desktop")
+
+        menu.classList.add("Window");
+        menu.setAttribute('pid',this.pid);
+        menu.setAttribute('title', this.title);
+        menu.style.width = this.width + "px";
+        menu.style.height = this.height + "px";
+        menu.style.top = (parseInt(menupos.top) - this.height) + "px";
+        menu.style.left = parseInt(menupos.left) + "px";
+        menu.style.zIndex = "100001"
+
+        menu.innerHTML = this.content
+
+        menulocation.insertAdjacentElement("beforeend", menu)
     }
 }
 class topbar{

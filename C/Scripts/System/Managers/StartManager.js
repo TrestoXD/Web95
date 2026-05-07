@@ -40,21 +40,21 @@ function settingsLoader(){
 
     //BACKGROUND
     if(background){
-        displaybackgroundchange(background);
+        //displaybackgroundchange(background);
     }else{
         localStorage.setItem('settings_background', '#008080');
     }
 
     //SELECTION
     if(selection){
-        displayselectionchange(selection);
+        //displayselectionchange(selection);
     }else{
         localStorage.setItem('settings_selection', '#000080');
     }
 
     //BODY
     if(body){
-        displaybodychange(body);
+        //displaybodychange(body);
     }else{
         localStorage.setItem('settings_body', '#c3c3c3');
     }

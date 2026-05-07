@@ -34,7 +34,7 @@ class taskbar{
 
         taskbar.innerHTML = `
             ${ this.startbutton ? `<div id="taskbarstartbutton">
-                <button id="StartButton" class="StartButton" onclick="mainmenuButton()"><img src="./Styles/icons/System/windowsstartlogo.png"><p>Start</p></button>
+                <button id="StartButton" class="StartButton" onclick="startmenuexe(this)"><img src="./Styles/icons/System/windowsstartlogo.png"><p>Start</p></button>
                 <hr>
             </div>` : ''}
 
