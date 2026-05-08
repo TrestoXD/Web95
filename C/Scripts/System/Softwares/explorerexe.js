@@ -14,13 +14,14 @@ let lastwindowpid = '00001';
 
 
 class explorer{
-    constructor(title = "Hello World" ,pid = "00001" ,description = "This is a process without description", width = "450", height = "300", image = "./Styles/windowsicons/windows.png", maximizable = true, minimizable = true, closable=true, ontop = false, isdialog = false, movable = true, buttonontaskbar = true, content = "Hello World! this is text here!"){
+    constructor(title = "Hello World" ,pid = "00001" ,description = "This is a process without description", width = "450", height = "300", image = "./Styles/windowsicons/windows.png", once = false, maximizable = true, minimizable = true, closable=true, ontop = false, isdialog = false, movable = true, buttonontaskbar = true, content = "Hello World! this is text here!"){
         this.title = title
         this.pid = pid
         this.description = description
         this.width = width
         this.height = height
         this.image = image
+        this.once = once
         // OPTIONS FOR THE TOPBAR
         this.maximizable = maximizable
         this.minimizable = minimizable
@@ -32,10 +33,15 @@ class explorer{
         this.buttonontaskbar = buttonontaskbar
 
         let currentpid = parseInt(this.pid);
-        while(document.querySelector(`[title="${this.title}"][pid="${this.pid}"]`)){
-            currentpid++; 
-            this.pid = currentpid.toString().padStart(5, '0');
+        if(this.once == false){
+            while(document.querySelector(`[title="${this.title}"][pid="${this.pid}"]`)){
+                currentpid++; 
+                this.pid = currentpid.toString().padStart(5, '0');
+            }    
+        }else{
+            console.log("Window Already Created!")
         }
+        
 
         this.content = `
         <div class="WTop-Bar" pid="${this.pid}" title="${this.title}"> 
@@ -91,35 +97,40 @@ class explorer{
         windows.innerHTML = this.content
 
         // ADDS THE WINDOW TO YOUR SCREEN :D
-        windowlocation.insertAdjacentElement("beforeend", windows);
-        windows.addEventListener("mousedown", (e) => explorerclickManager(e, this.title,this.pid))
-        // SUPER COOL CONSOLE LOG FOR THE DEBUGS :O
-        console.log(`New Window created: TITLE: "${this.title}" PID: ${this.pid}`)
-        
-        // CREATE THE BUTTON ON THE TASKBAR
-        if(this.buttonontaskbar){
-        BuildTaskbarButton(this.pid, this.title, this.image);
-        }
+        if(this.once == false || this.once == true && document.querySelector(`[title="${this.title}"][pid="${this.pid}"]`) == null){
+            windowlocation.insertAdjacentElement("beforeend", windows);
+            console.log(`New Window created: TITLE: "${this.title}" PID: ${this.pid}`)
+            console.log(document.querySelector(`[title="${this.title}"][pid="${this.pid}"]`))
+            // ADDS THE EVENT LISTNER
+            windows.addEventListener("mousedown", (e) => explorerclickManager(e, this.title,this.pid))
+            
+            // SUPER COOL CONSOLE LOG FOR THE DEBUGS :O
+            
+            // CREATE THE BUTTON ON THE TASKBAR
+            if(this.buttonontaskbar){
+                BuildTaskbarButton(this.pid, this.title, this.image);
+            }
 
-        // SELECT THE WINDOW
-        document.querySelectorAll('.WTop-Bar').forEach(bar =>{
-        bar.style.background = '';
-        bar.style.color = '';
-        })
-        document.querySelectorAll(`.Window`).forEach(wins =>
-        {
+            // SELECT THE WINDOW
+            document.querySelectorAll('.WTop-Bar').forEach(bar =>{
+                bar.style.background = '';
+                bar.style.color = '';
+            })
+            document.querySelectorAll(`.Window`).forEach(wins =>
+            {
             wins.style.zIndex = 1
-        })
-        const TopBars = document.querySelectorAll(`.WTop-Bar[title="${this.title}"][pid="${this.pid}"]`);
-        TopBars.forEach(bar => {
-            bar.style.background = 'var(--selection-color)';
-            bar.style.color = 'white';
-            windows.style.zIndex = 99999
-        })
+            })
+            const TopBars = document.querySelectorAll(`.WTop-Bar[title="${this.title}"][pid="${this.pid}"]`);
+            TopBars.forEach(bar => {
+                bar.style.background = 'var(--selection-color)';
+                bar.style.color = 'white';
+                windows.style.zIndex = 99999
+            })
+        }
     }
 }
 class menu{
-    constructor(title = "Hello menu", pid = "00001", width = "150", height = "300",button, content = 'Hello text'){
+    constructor(title = "Hello menu", pid = "00001", width = "150", height = "300",button, once = true, content = 'Hello text'){
         // MENU VARIABLES
         this.title = title;
         this.pid = pid;
@@ -144,7 +155,7 @@ class menu{
         const menupos = button.getBoundingClientRect();
         const menulocation = document.getElementById("Desktop")
 
-        menu.classList.add("Window");
+        menu.classList.add("Menu");
         menu.setAttribute('pid',this.pid);
         menu.setAttribute('title', this.title);
         menu.style.width = this.width + "px";
@@ -193,7 +204,7 @@ class topbar{
             ` : ''}
 
             ${this.closable !== undefined ? `
-                <button onclick="new explorer().CloseWindow('${this.title}','${this.pid}');" ${!this.closable ? 'disabled' : ''}> 
+                <button onclick="CloseWindow('${this.title}','${this.pid}');" ${!this.closable ? 'disabled' : ''}> 
                     <img src="./Styles/icons/close.svg" alt="r"> 
                 </button>
             </div>

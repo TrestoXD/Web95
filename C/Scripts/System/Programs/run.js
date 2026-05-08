@@ -1,6 +1,6 @@
 function runexe(){
 
-new explorer("Run", undefined,"The run program is to run apps in a fast and easy way","450","165",false,false,false,true,true,true,true,true,
+new explorer("Run", undefined,"The run program is to run apps in a fast and easy way","450","165",false,true,false,false,true,true,true,true,true,
     `
     <div class="run">
         <div style="display:flex; ">
@@ -47,10 +47,10 @@ function run_ok(button){
     const data = {};
 
     // ALL THE DATA FROM THE RUN
-    data["cmd"] = { name: "cmd", dir:"cmdexe"};
+    data["command"] = { name: "cmd", dir:"cmdexe"};
     data["msinfo32"] = {name:"msinfo32"}
 
-    if(data[string]){
+    if(data[string].name){
         if(data[string].dir){
             window[data[string].dir]();
             LocateCloseWindow(button);

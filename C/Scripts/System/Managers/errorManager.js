@@ -9,7 +9,7 @@ function syserror(error){
     var Errorsound = new Audio(errorsoundData);
     Errorsound.play()
 
-    new explorer(title, undefined, "The error process!", '350', 'auto',false,false,false,false,true,false,true,false,
+    new explorer(title, undefined, "The error process!", '350', 'auto',false,false,false,false,false,true,false,true,false,
         `
         <div>
             <div class="window_error">

@@ -864,6 +864,27 @@ button[disabled] img{
     display: flex;
     flex-direction: column;
 }
+.Menu{
+    position:absolute;
+    z-index: 1;
+
+    font-size: calc(16px - var(--fontsize));
+    padding: 2px;
+    padding-right: 3px;
+
+    color: black;
+    background-color: var(--body-color);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--body-color) black black var(--body-color);
+    box-shadow: -1px -1px var(--terbody-color) inset, 1px 1px white inset;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+}
 .WInterior{
     padding: 4px;
 
@@ -879,7 +900,95 @@ button[disabled] img{
 
     box-sizing: border-box;
 }
+.WTerminal{
+    font-family: CMD;
+    padding: 10px;
+    gap: 0;
+    margin: 0;
 
+    display: block;
+
+    background-color: black;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--terbody-color) white white var(--terbody-color);
+    box-shadow: -1px -1px var(--terbody-color) inset, 1px 1px black inset;
+
+    height: 100%;
+    margin-bottom: 1px;
+
+    box-sizing: border-box;
+
+    overflow-y:auto;
+    overflow-x:auto;
+    font-weight:lighter;
+}
+.WTerminal p{
+    font-family: CMD;
+    color: white;
+    line-height: 1;
+
+    word-break:normal;
+    height: auto;
+    margin: 0;
+    font-weight:lighter;
+}
+.WTerminal span{
+    font-family: CMD;
+    color: white;
+    word-spacing: -2px;
+    margin: 0;
+    font-weight:lighter;
+}
+.WTerminal input{
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    color: white;
+
+    box-sizing: border-box;
+    width: 70%;
+    padding: 0;
+    margin: 0;
+    font-family: CMD;
+    font-weight:lighter;
+}
+.WTerminal input:focus{
+    outline: none;
+}
+.WNavegation{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+.WNavegation select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: black white white black;
+    box-shadow: -1px -1px var(--body-color) inset, 1px 1px white inset;
+    
+
+    padding-left: 28px;
+    padding-right: 32px;
+
+    background: url(./icons/button-down.svg) 100% / 20% no-repeat;
+    background-color: white;
+}
+.WNavegation br{
+    padding: 4px;
+}
+.WNavegation button{
+    width: 26px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+}
 /*
     W I N D O W  -  T O P   B A R
 */
@@ -890,10 +999,10 @@ button[disabled] img{
 
 
     justify-content: space-between;
-    height: 24px;
+    height: 26px;
 
     align-items: center;
-    padding: 1px 3px 1px 3px;
+    padding: 2px 4px 2px 4px;
     margin-bottom: 2px;
 
     background: var(--terbody-color);
@@ -927,8 +1036,8 @@ button[disabled] img{
     margin-right: 2px;
 }
 .WTop-Bar > div > button{
-    height: 19px;
-    width: 21px;
+    height: 14px;
+    width: 16px;
 
     background-color: var(--body-color);
 
@@ -940,6 +1049,8 @@ button[disabled] img{
     line-height: 0px;
 
     box-shadow: -1px -1px var(--terbody-color) inset;
+    padding: 0;
+    margin: 0;
 }
 
 .WTop-Bar > div > button:active{
@@ -973,8 +1084,8 @@ button[disabled] img{
 
     line-height: 0px;
 
-    transform: translate(calc(-55%), calc(-55%));
-    width: 12px;
+    transform: translate(calc(-50%), calc(-55%));
+    width: 13px;
 
     -webkit-user-drag:none;
     pointer-events: none;
