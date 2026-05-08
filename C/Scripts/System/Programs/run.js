@@ -42,13 +42,13 @@ new explorer("Run", undefined,"The run program is to run apps in a fast and easy
 }
 
 function run_ok(button){
-    const string = document.getElementById("run-input").value;
+    const string = (document.getElementById("run-input").value).toString().toLowerCase();
 
     const data = {};
 
     // ALL THE DATA FROM THE RUN
     data["command"] = { name: "cmd", dir:"cmdexe"};
-    data["msinfo32"] = {name:"msinfo32"}
+    data["msinfo32"] = {name: "msinfo32"}
 
     if(data[string].name){
         if(data[string].dir){
