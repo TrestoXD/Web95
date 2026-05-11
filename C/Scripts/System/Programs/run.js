@@ -48,7 +48,7 @@ function run_ok(button){
 
     // ALL THE DATA FROM THE RUN
     data["command"] = { name: "cmd", dir:"cmdexe"};
-    data["msinfo32"] = {name: "msinfo32"}
+    data["msinfo32"] = {name: "msinfo32", dir:"msinfo32exe"};
 
     if(data[string].name){
         if(data[string].dir){

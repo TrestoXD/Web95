@@ -1,7 +1,6 @@
 //// THIS IS THE NEW CREATION WINDOW
 
 //  VARIABLES
-
 let currentwindowpid = sessionStorage.setItem("currentpid", "0")
 let currentwindowtitle = sessionStorage.setItem("currenttitle", "0")
 
