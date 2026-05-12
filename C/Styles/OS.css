@@ -246,7 +246,70 @@ button, select{
     min-width: 24px;
     min-height: 24px;
 }
+input[type="radio"]{
+    appearance: none;
+    -moz-appearance: none;
 
+    box-sizing: border-box;
+    
+    width: calc(16px - var(--fontsize));
+    height: calc(16px - var(--fontsize));
+    margin: 0px;
+    padding: 0;
+    
+    background-color: white;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white black black white;
+    box-shadow: -1px -1px var(--terbody-color) inset;
+
+    border-radius: 10px;
+}
+input[type="radio"]:checked{
+    outline: white 3px solid;
+    outline-offset: -5px;
+    background-color: black;
+    border-width: 3px;
+}
+input[type="range"]{
+    appearance: none;
+
+    width: 150px;
+    height: 0px;
+
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+    background-color: none;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black white white black;
+}
+input[type="range"]::-webkit-slider-thumb{
+    appearance: none;
+    -webkit-appearance: none;
+    width: calc(13px - var(--fontsize));
+    height: calc(24px - var(--fontsize));;
+    background: url(./icons/rangehor.ico) no-repeat;
+
+    border: none;
+    border-radius: 0;
+
+    cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb{
+    appearance: none;
+    width: calc(13px - var(--fontsize));
+    height: calc(24px - var(--fontsize));;
+    background: url(./icons/rangehor.ico) no-repeat;
+
+    border: none;
+    border-radius: 0;
+    scale: 1.2;
+
+    cursor: pointer;
+}
 input[type="text"]{
     background-color: white;
 
@@ -261,9 +324,6 @@ input[type="text"]{
 }
 input[type="text"]:focus{
     outline: none;
-}
-input[type="radio"]{
-    
 }
 
 
@@ -423,7 +483,7 @@ button[disabled] img{
     box-shadow: -1px -1px var(--terbody-color) inset;
 }
 
-.input input{
+.input input[type=checkbox]{
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -443,7 +503,7 @@ button[disabled] img{
     text-shadow: 1px 1px 0px white;
 }
 
-.input input:checked ~ .Checkmark{
+.input input[type=checkbox]:checked ~ .Checkmark{
     color: black;
     display: block;
     filter: brightness(0);
@@ -944,7 +1004,7 @@ button[disabled] img{
     margin: 0;
     font-weight:lighter;
 }
-.WTerminal input{
+.WTerminal input[type="text"]{
     border: none;
     background-color: transparent;
     box-shadow: none;
@@ -957,7 +1017,7 @@ button[disabled] img{
     font-family: CMD;
     font-weight:lighter;
 }
-.WTerminal input:focus{
+.WTerminal input[type="text"]:focus{
     outline: none;
 }
 .WNavegation{

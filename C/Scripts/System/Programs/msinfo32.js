@@ -3,28 +3,30 @@ function msinfo32exe(){
     `
     <div class="WNavInterior">
         <nav>
-            <li>General</button>
+            <button>General</button>
             <button>Device Manager</button>
             <button>Hardware Profiles</button>
             <button>Performance</button>
         </nav>
-        <section id="tabpanel">
-            <div>    
-                <div>
-                
-                </div>
-                <div>
-                    <p>System:</p>
-                    <ul>
-                        <li>Web 95</li>
-                        <input tpye="radio">
-                    </ul>
-                    <p>Computer:</p>
-                    <ul>
-                        <li>Plentium(r)</li>
-                        <li>64.0MB RAM</li>
-                        
-                    </ul>
+        <section id="tabpanel">    
+            <div id="1" style="display:flex; flex-direction: column; width:100%; padding:15px;">
+                <p>System:</p>
+                <ul>
+                    <li>Web 95</li>
+                    <label>Input type Radio</label>
+                    <input type="radio">
+                </ul>
+                <p>Computer:</p>
+                <ul>
+                    <input type="text">
+                    <li>Plentium(r)</li>
+                    <li>64.0MB RAM</li>
+                </ul>
+                <div style="display:flex; flex-direction: row;">
+                    <label>Volume:</label>
+                    <label>Low</label>
+                    <input type="range" min="1" max="11" value="5" />
+                    <label>High</label>
                 </div>
             </div>
         </section>
