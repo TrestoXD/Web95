@@ -1052,6 +1052,16 @@ button[disabled] img{
     margin: 0;
     padding: 0;
 }
+
+#tabpanel p{
+    margin: 0;
+}
+#tabpanel{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
 .WNavInterior{
     display: flex;
     flex-direction: column;

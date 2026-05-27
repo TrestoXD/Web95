@@ -9,25 +9,23 @@ function msinfo32exe(){
             <button>Performance</button>
         </nav>
         <section id="tabpanel">    
+            <img src="./Styles/images/computermsinfo32.png" style=" width:200px; height: 200px; margin: 25px">
             <div id="1" style="display:flex; flex-direction: column; width:100%; padding:15px;">
                 <p>System:</p>
                 <ul>
                     <li>Web 95</li>
-                    <label>Input type Radio</label>
-                    <input type="radio">
+                    <li id="github-version">0.1.17</li>
+                </ul>
+                <p>Registered to:</p>
+                <ul>
+                    <li>Your Name</li>
+                    <li>00000-OEM-0000000-00000</li>
                 </ul>
                 <p>Computer:</p>
                 <ul>
-                    <input type="text">
                     <li>Plentium(r)</li>
                     <li>64.0MB RAM</li>
                 </ul>
-                <div style="display:flex; flex-direction: row;">
-                    <label>Volume:</label>
-                    <label>Low</label>
-                    <input type="range" min="1" max="11" value="5" />
-                    <label>High</label>
-                </div>
             </div>
         </section>
         <div>
@@ -37,3 +35,10 @@ function msinfo32exe(){
     </div>
     `).BuildWindow();
 }
+
+// <div style="display:flex; flex-direction: row;">
+//                    <label>Volume:</label>
+//                    <label>Low</label>
+//                    <input type="range" min="1" max="11" value="5" />
+//                    <label>High</label>
+//                </div>
